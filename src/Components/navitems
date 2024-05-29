@@ -1,0 +1,329 @@
+// // eslint-disable-next-line no-unused-vars
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import logo from "../assets/images/logo-icon-nav.png";
+
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [activeLink, setActiveLink] = useState(null);
+
+//   const toggleNavbar = () => {
+//     setIsOpen(!isOpen);
+//   };
+
+//   const closeNavbar = () => {
+//     setIsOpen(false);
+//   };
+
+//   const handleNavLinkClick = (index) => {
+//     setActiveLink(index);
+//     closeNavbar();
+//   };
+//   return (
+//     <>
+//       <nav className="relative z-10 flex flex-rows p-2 justify-between items-center bg-black font-eb-garamond md:border-b-0 border-transparent border-b-white">
+//         <div className="">
+//           <img src={logo} alt="logo-img" className="h-[40px] w-[60px]" />
+//         </div>
+//         <div className="flex-row items-center justify-center gap-12 text-white hidden md:flex ">
+//           <Link
+//             to="/"
+//             className={`nav-link ${
+//               activeLink === 0 ? "text-yellow" : "text-white"
+//             } hover:text-yellow border-b-2 border-transparent hover:border-white`}
+//             onClick={() => handleNavLinkClick(0)}
+//           >
+//             Home
+//           </Link>
+//           <Link
+//             to="/about"
+//             className={`nav-link ${
+//               activeLink === 1 ? "text-yellow" : "text-white"
+//             } hover:text-yellow border-b-2 border-transparent hover:border-white`}
+//             onClick={() => handleNavLinkClick(1)}
+//           >
+//             About
+//           </Link>
+//           <Link
+//             to="/resume"
+//             className={`nav-link ${
+//               activeLink === 2 ? "text-yellow" : "text-white"
+//             } hover:text-yellow border-b-2 border-transparent hover:border-white`}
+//             onClick={() => handleNavLinkClick(2)}
+//           >
+//             Resume
+//           </Link>
+//           <Link
+//             to="/portfolio"
+//             className={`nav-link ${
+//               activeLink === 3 ? "text-yellow" : "text-white"
+//             } hover:text-yellow border-b-2 border-transparent hover:border-white`}
+//             onClick={() => handleNavLinkClick(3)}
+//           >
+//             Portfolio
+//           </Link>
+//           <Link
+//             to="/service"
+//             className={`nav-link ${
+//               activeLink === 4 ? "text-yellow" : "text-white"
+//             } hover:text-yellow border-b-2 border-transparent hover:border-white`}
+//             onClick={() => handleNavLinkClick(4)}
+//           >
+//             Service
+//           </Link>
+//         </div>
+//         <div className="px-4 hidden md:block">
+//           <Link to="/contact">
+//             <button className="px-3 py-2 bg-red text-white hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+//               Contact
+//             </button>
+//           </Link>
+//         </div>
+//         <div className="md:hidden flex items-center">
+//           <button
+//             onClick={toggleNavbar}
+//             className="text-white focus:outline-none"
+//           >
+//             <svg
+//               className="h-6 w-6"
+//               fill="none"
+//               viewBox="0 0 24 24"
+//               stroke="#ffb703"
+//             >
+//               {isOpen ? (
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth="2.5"
+//                   d="M6 18L18 6M6 6l12 12"
+//                 />
+//               ) : (
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   d="M22 8H2 M22 2H2 M22 14H2"
+//                   stroke="#ffb703"
+//                   strokeWidth="2.5"
+//                 />
+//               )}
+//             </svg>
+//           </button>
+//         </div>
+//         {isOpen && (
+//           <div className="md:flex fixed top-[53px] h-60% py-4 px-3 bg-black w-64 flex flex-col items-left justify-center transition-transform transform ease-in-out duration-300">
+//             <div className="flex flex-col text-white gap-4">
+//               <Link
+//                 to="/"
+//                 className={`nav-link ${
+//                   activeLink === 0 ? "text-yellow" : "text-white"
+//                 } cursor-pointer px-4 py-2`}
+//                 onClick={() => handleNavLinkClick(0)}
+//               >
+//                 Home
+//               </Link>
+//               <Link
+//                 to="/about"
+//                 className={`nav-link ${
+//                   activeLink === 1 ? "text-yellow" : "text-white"
+//                 } cursor-pointer px-4 py-2`}
+//                 onClick={() => handleNavLinkClick(1)}
+//               >
+//                 About
+//               </Link>
+//               <Link
+//                 to="/resume"
+//                 className={`nav-link ${
+//                   activeLink === 2 ? "text-yellow" : "text-white"
+//                 } cursor-pointer px-4 py-2`}
+//                 onClick={() => handleNavLinkClick(2)}
+//               >
+//                 Resume
+//               </Link>
+//               <Link
+//                 to="/portfolio"
+//                 className={`nav-link ${
+//                   activeLink === 3 ? "text-yellow" : "text-white"
+//                 } cursor-pointer px-4 py-2`}
+//                 onClick={() => handleNavLinkClick(3)}
+//               >
+//                 Portfolio
+//               </Link>
+//               <Link
+//                 to="/service"
+//                 className={`nav-link ${
+//                   activeLink === 4 ? "text-yellow" : "text-white"
+//                 } cursor-pointer px-4 py-2`}
+//                 onClick={() => handleNavLinkClick(4)}
+//               >
+//                 Service
+//               </Link>
+
+//               <Link to="/contact">
+//                 <button
+//                   className="px-3 py-2 bg-red text-white hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+//                   onClick={closeNavbar}
+//                 >
+//                   Contact
+//                 </button>
+//               </Link>
+//             </div>
+//           </div>
+//         )}
+//       </nav>
+//     </>
+//   );
+// };
+
+// export default Navbar;
+{
+  /* <div className="sidebar transition-transform transform ease-in-out duration-300">
+<Link to="/" className="nav-list">
+  Home
+</Link>
+<Link to="/about" className="nav-list">
+  About
+</Link>
+<Link to="/resume" className="nav-list">
+  Resume
+</Link>
+<Link to="/portolio" className="nav-list">
+  Portfolio
+</Link>
+<Link to="/service" className="nav-list">
+  Service
+</Link>
+<Link to="/contact" className="nav-list">
+  Contact
+</Link>
+</div> */
+// }
+
+
+// import React from "react";
+// import { BiSolidContact } from "react-icons/bi";
+// import {
+//   faUser,
+//   faEnvelope,
+//   faPhone,
+//   faComment,
+// } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { db } from "../Firebase/firebase";
+// import { serverTimestamp } from "firebase/firestore";
+
+// const Contact = () => {
+//   const handleSubmit = async (event) => {
+//     event.preventDefault();
+
+//     const name = event.target.elements.name.value;
+//     const email = event.target.elements.email.value;
+//     const phone = event.target.elements.phone.value;
+//     const message = event.target.elements.message.value;
+
+//     await db.collection("contacts").add({
+//       name,
+//       email,
+//       phone,
+//       message,
+//       timestamp: serverTimestamp(),
+//     });
+
+//     // Reset the form after saving data
+//     // Reset the form fields after saving data
+//     event.target.elements.name.value = "";
+//     event.target.elements.email.value = "";
+//     event.target.elements.phone.value = "";
+//     event.target.elements.message.value = "";
+//   };
+//   return (
+//     <div className="relative z-10 top-[6rem] left-0 right-0 px-[1.5rem] py-[1rem]">
+//       <div className="flex flex-col gap-4 items-center">
+//         <div className="flex flex-row gap-2">
+//           <BiSolidContact className="text-gold w-[35px] h-[35px]" />
+//           <h2 className="text-white text-xl font-eb-garamond tracking-wider mt-3">
+//             Let's connect — Let's embark on a journey together
+//           </h2>
+//         </div>
+
+//         <form
+//           onSubmit={handleSubmit}
+//           className="relative top-0 right-0 left-0 flex flex-col"
+//         >
+//           <label htmlFor="name" className="text-gold font-lg font-serif">
+//             Name
+//           </label>
+//           <div className="input-with-icon">
+//             <FontAwesomeIcon icon={faUser} className="input-icon" />
+//             <input
+//               name="name"
+//               id="name"
+//               type="text"
+//               placeholder="Hungry Helen"
+//               className="w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
+//             />
+//           </div>
+
+//           <label
+//             htmlFor="email"
+//             className="text-gold font-lg text-left font-serif"
+//           >
+//             Email
+//           </label>
+//           <div className="input-with-icon">
+//             <FontAwesomeIcon icon={faEnvelope} className="input-icon" />
+//             <input
+//               name="email"
+//               id="email"
+//               type="text"
+//               placeholder="hungryhelen@gmail.com"
+//               className="w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
+//             />
+//           </div>
+
+//           <label
+//             htmlFor="phone"
+//             className="text-gold font-lg text-left font-serif"
+//           >
+//             Phone Number
+//           </label>
+//           <div className="input-with-icon">
+//             <FontAwesomeIcon icon={faPhone} className="input-icon" />
+//             <input
+//               name="phone"
+//               id="phone"
+//               type="text"
+//               placeholder="+12343357689"
+//               className="w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
+//             />
+//           </div>
+
+//           <label
+//             htmlFor="message"
+//             className="text-gold font-lg text-left font-serif"
+//           >
+//             Message{" "}
+//           </label>
+//           <div className="input-with-icon">
+//             <FontAwesomeIcon icon={faComment} className="input-icon-text" />
+//             <textarea
+//               name="message"
+//               id="message"
+//               placeholder="my message goes here....."
+//               className="w-[45vw] h-[20vh] px-[3.2rem] py-3 mb-5 bg-gray input"
+//             ></textarea>
+//           </div>
+//           <div className="">
+//             <button
+//               type="submit"
+//               className="px-10 py-2 bg-red text-white rounded-lg hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+//             >
+//               Submit
+//             </button>
+//           </div>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Contact;
