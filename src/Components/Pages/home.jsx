@@ -31,7 +31,7 @@ const home = () => {
             </Link>
           </div>
         </div>
-        <div className=" absolute bottom-5 top-[50rem] lg:top-[35rem]">
+        <div className=" absolute bottom-5 top-[50rem] lg:top-[45rem]">
           <SocioIcons></SocioIcons>
         </div>
       </div>

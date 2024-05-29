@@ -21,13 +21,13 @@ const resume = () => {
 
         <div className="flex flex-row gap-5 py-4">
           <SiLiberadotchat className="w-5 h-5" />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
               Front-End Web Development
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <p className="text-md text-gold font-serif pt-2 leading-3">
                 Hertechtrail Academy
               </p>
             </div>
@@ -36,13 +36,13 @@ const resume = () => {
 
         <div className="flex flex-row gap-5 py-4">
           <SiLiberadotchat className="w-5 h-5" />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
               Diploma in Website Development & SEO
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <p className="text-md text-gold font-serif pt-2 leading-3">
                 Digital Marketing Skill Institute
               </p>
             </div>
@@ -51,13 +51,13 @@ const resume = () => {
 
         <div className="flex flex-row gap-4 py-4">
           <SiLiberadotchat className="w-5 h-5" />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
               Javascript Algorithms and Data Structures
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <p className="text-md text-gold font-serif pt-2 leading-3">
                 FreeCodeCamp
               </p>
             </div>
@@ -66,13 +66,13 @@ const resume = () => {
 
         <div className="flex flex-row gap-5 py-4">
           <SiLiberadotchat className="w-5 h-5" />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
               Responsive Web Design
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <p className="text-md text-gold font-serif pt-2 leading-3">
                 FreeCodeCamp
               </p>
             </div>
@@ -81,13 +81,13 @@ const resume = () => {
 
         <div className="flex flex-row gap-5 py-4">
           <SiLiberadotchat className="w-5 h-5" />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
               National Youth Service Corps
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <p className="text-md text-gold font-serif pt-2 leading-3">
                 NYSC Nigeria
               </p>
             </div>
@@ -97,7 +97,7 @@ const resume = () => {
 
       <img className="lg:pl-[15rem] resume-img" src={image} alt="" />
 
-      <div className="lg:absolute lg:top-[29rem] lg:left-[20rem] flex flex-col gap-1 items-start">
+      <div className="lg:absolute lg:top-[33rem] lg:left-[20rem] flex flex-col gap-1 items-start">
         <h1 className="text-4xl font-eb-garamond leading-3">Experience</h1>
         <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
 
@@ -139,7 +139,7 @@ const resume = () => {
           </div>
         </div>
       </div>
-      <div className="lg:absolute lg:top-[29rem] lg:left-[60rem] flex flex-col gap-1 lg:pl-[15rem] items-start">
+      <div className="lg:absolute lg:top-[32rem] lg:left-[60rem] flex flex-col gap-1 lg:pl-[15rem] items-start">
         <h1 className="text-4xl font-eb-garamond leading-3">Skill Sets</h1>
         <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
 

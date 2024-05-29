@@ -69,8 +69,6 @@ const contact = () => {
         </div>
 
         <form
-          action="https://formsubmit.co/estherolowo2018@gmail.com"
-          method="post"
           className="relative top-0 right-0 left-0 flex flex-col"
           onSubmit={handleSubmit}
         >
