@@ -104,11 +104,11 @@ span .error-text {
 }
 
 .bounce {
-  animation: bounceInFromTop 2s ease;
+  animation: bounceInFromTop 1s ease;
 }
 
 .fade-in {
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -120,15 +120,4 @@ span .error-text {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.portf-img img {
-  width: 100%;
-  height: 100%;
-}
-
-.portf-img {
-  width: 20vw;
-  /* height: 20px; */
-  overflow: hidden;
 }

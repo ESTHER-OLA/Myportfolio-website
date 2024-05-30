@@ -2,6 +2,7 @@
 import React from "react";
 import SocioIcons from "./SocioIcons";
 import { Link } from "react-router-dom";
+import RotatingText from "react-rotating-text";
 
 const home = () => {
   return (
@@ -16,7 +17,14 @@ const home = () => {
             PELUMI OLA
           </h1>
           <p className="text-2xl pb-5 leading-[3rem] tracking-wide fade-in">
-            FRONTEND DEVELOPER
+            <RotatingText
+              items={[
+                "FRONTEND DEVELOPER",
+                "SEO SPECIALIST",
+                "WORDPRESS WEBSITE DEVELOPER",
+                "REACT JS ENTHUSIAST",
+              ]}
+            />
           </p>
           <div className="flex flex-row gap-5">
             <Link to="/resume">
