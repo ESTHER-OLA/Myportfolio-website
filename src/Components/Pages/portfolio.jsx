@@ -14,7 +14,7 @@ const portfolio = () => {
         MY PROJECTS
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 px-8 py-8 items-center justify-center">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2 lg:gap-5">
           <Link to="https://c8-project.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               MealPal App
@@ -29,7 +29,7 @@ const portfolio = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2 lg:gap-5">
           <Link
             to="https://social-media-app-azure-iota.vercel.app/"
             target="_blank"
@@ -47,7 +47,7 @@ const portfolio = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2 lg:gap-5">
           <Link to="https://fresh-coffee-website.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Coffee Website
@@ -62,7 +62,7 @@ const portfolio = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 mt-7">
+        <div className="flex flex-col gap-2 lg:gap-5 lg:mt-7">
           <Link to="https://landind-page-inky.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Landing Page
@@ -77,7 +77,7 @@ const portfolio = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 mt-7">
+        <div className="flex flex-col gap-2 lg:gap-5 lg:mt-7">
           <Link to="https://esther-ola-portfolio.netlify.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Portfolio Website
@@ -92,7 +92,7 @@ const portfolio = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 mt-7">
+        <div className="flex flex-col gap-2 lg:gap-5 lg:mt-7">
           <Link to="https://passwordgen-app.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               PassWord Generator App
