@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meet Ola Esther Pelumi, a passionate Frontend Developer, WordPress specialist, and SEO enthusiast. With a solid background in HTML, CSS3, JavaScript, React.js, Tailwind CSS, and WordPress customization, including plugin integration and domain
 
-Currently, two official plugins are available:
+management, I've honed my skills through certified training and hands-on projects. I thrive on crafting responsive and engaging websites and applications. Currently, I'm eagerly seeking intern or entry-level opportunities to further my
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+development journey and eventually transition into a full-stack developer role. My portfolio showcases my commitment to creating user-friendly and visually captivating digital experiences. I am dedicated to continuous learning and growth in
+
+the dynamic world of web development. Let's connect and explore how we can collaborate on exciting projects!
+
+# [visit my website](https://myportfolio-website-two.vercel.app/)
