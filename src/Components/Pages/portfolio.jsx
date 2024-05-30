@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 
 const portfolio = () => {
   return (
-    <div className="relative z-10 top-10 px-[3rem] py-[3rem]">
+    <div className="relative z-10 top-10 px-[3rem] py-[3rem] bounce">
       <div className="text-gold text-center text-3xl items-center font-eb-garamond">
         MY PROJECTS
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 px-8 py-8 items-center justify-center">
-        <div className="flex flex-col gap-2">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 px-8 py-8 items-center justify-center">
+        <div className="flex flex-col gap-5">
           <Link to="https://c8-project.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               MealPal App
@@ -22,14 +22,14 @@ const portfolio = () => {
           </Link>
           <div className="items-center">
             <img
-              className="lg:h-[30vh] bg-white"
+              className="lg:h-[30vh] bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               src={MealPal}
               alt="project-img"
             />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-5">
           <Link
             to="https://social-media-app-azure-iota.vercel.app/"
             target="_blank"
@@ -40,14 +40,14 @@ const portfolio = () => {
           </Link>
           <div className="items-center">
             <img
-              className="lg:h-[30vh] bg-white"
+              className="lg:h-[30vh] bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               src={SocialMediaApp}
               alt="project-img"
             />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-5">
           <Link to="https://fresh-coffee-website.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Coffee Website
@@ -55,25 +55,29 @@ const portfolio = () => {
           </Link>
           <div className="items-center">
             <img
-              className="lg:h-[30vh]"
+              className="lg:h-[30vh] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               src={coffeeWebsite}
               alt="project-img"
             />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-5 mt-7">
           <Link to="https://landind-page-inky.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Landing Page
             </button>
           </Link>
           <div className="items-center">
-            <img className="lg:h-[30vh]" src={landingpage} alt="project-img" />
+            <img
+              className="lg:h-[30vh] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              src={landingpage}
+              alt="project-img"
+            />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-5 mt-7">
           <Link to="https://esther-ola-portfolio.netlify.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               Portfolio Website
@@ -81,21 +85,25 @@ const portfolio = () => {
           </Link>
           <div className="items-center">
             <img
-              className="lg:h-[30vh] bg-white"
+              className="lg:h-[30vh] bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               src={PortfolioWeb}
               alt="project-img"
             />
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-5 mt-7">
           <Link to="https://passwordgen-app.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
               PassWord Generator App
             </button>
           </Link>
           <div className="items-center">
-            <img className="lg:h-[30vh]" src={PassWordGen} alt="project-img" />
+            <img
+              className="lg:h-[30vh] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              src={PassWordGen}
+              alt="project-img"
+            />
           </div>
         </div>
       </div>

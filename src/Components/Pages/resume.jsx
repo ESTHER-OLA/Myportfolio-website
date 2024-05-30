@@ -11,10 +11,11 @@ import { RiJavascriptFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
 import { SiSass } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { RiReactjsLine } from "react-icons/ri";
 
 const resume = () => {
   return (
-    <div className="relative z-10 top-[5rem] lg:top-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero">
+    <div className="relative z-10 top-[5rem] lg:top-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero bounce">
       <div className="flex flex-col gap-2 items-start lg:mt-10 hero-text">
         <h1 className="text-4xl font-eb-garamond leading-3">Certifications</h1>
         <img className="w-[60%] pt-2" src={line} alt="" />
@@ -179,6 +180,15 @@ const resume = () => {
             <p className="text-md text-white font-serif leading-3">
               Javascript
             </p>
+          </div>
+
+          <div className="flex flex-row gap-2">
+            <RiReactjsLine
+              className="border border-gold"
+              color="black"
+              size={15}
+            />
+            <p className="text-md text-white font-serif leading-3">React Js</p>
           </div>
 
           <div className="flex flex-row gap-2">

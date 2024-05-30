@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BiSolidContact } from "react-icons/bi";
 import {
   faUser,
@@ -8,8 +8,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PhoneInput from "react-phone-number-input";
-
+import emailjs from "@emailjs/browser";
 import "react-phone-number-input/style.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import ReCAPTCHA from "react-google-recaptcha";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const contact = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +24,8 @@ const contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,6 +40,11 @@ const contact = () => {
       ...formData,
       number: value,
     });
+  };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaToken(token);
+    console.log("Captcha token:", token);
   };
 
   const handleSubmit = (e) => {
@@ -56,10 +67,49 @@ const contact = () => {
     if (!formData.message.trim()) {
       validationErrors.message = "Message is required";
     }
-    setErrors(validationErrors);
+    if (!captchaToken) {
+      validationErrors.captcha = "Please complete the CAPTCHA";
+      setErrors(validationErrors);
+    }
+    if (Object.keys(validationErrors).length === 0) {
+      emailjs
+        .sendForm("service_ifrjlza", "template_gbpicfx", form.current, {
+          publicKey: "iYdDXRPaMdqaVpCgc",
+        })
+        .then(
+          () => {
+            toast.success("MESSAGE SENT!");
+          },
+          (error) => {
+            toast.error("MESSAGE FAIL TO SEND...", error.text);
+          }
+        );
+      // Reset form fields and PhoneInput value
+      setFormData({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    }
+    e.target.reset();
   };
+
   return (
-    <div className="relative z-10 top-[6rem] left-0 right-0 px-[1.5rem] py-[1rem]">
+    <div className="relative z-10 top-[4rem] left-0 right-0 px-[1.5rem] py-[1rem] fade-in">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition:Bounce
+      />
       <div className="flex flex-col gap-4 items-center">
         <div className="flex flex-row gap-2">
           <BiSolidContact className="text-gold w-[35px] h-[35px]" />
@@ -69,6 +119,7 @@ const contact = () => {
         </div>
 
         <form
+          ref={form}
           className="relative top-0 right-0 left-0 flex flex-col"
           onSubmit={handleSubmit}
         >
@@ -89,7 +140,6 @@ const contact = () => {
             </div>
             {errors.name && <span className="error-text">{errors.name}</span>}
           </div>
-
           <div>
             <label
               htmlFor="email"
@@ -110,7 +160,6 @@ const contact = () => {
             </div>
             {errors.email && <span className="error-text">{errors.email}</span>}
           </div>
-
           <div>
             <label
               htmlFor="number"
@@ -123,6 +172,7 @@ const contact = () => {
               <PhoneInput
                 international
                 defaultCountry="US"
+                name="number"
                 value={formData.number}
                 onChange={handlePhoneChange}
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
@@ -133,7 +183,6 @@ const contact = () => {
               <span className="error-text">{errors.number}</span>
             )}
           </div>
-
           <div>
             <label
               htmlFor="message"
@@ -155,13 +204,24 @@ const contact = () => {
               <span className="error-text">{errors.message}</span>
             )}
           </div>
-          <div className="">
-            <button
-              type="submit"
-              className="px-10 py-2 bg-red text-white rounded-lg hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-            >
-              Submit
-            </button>
+          <div className="flex flex-row gap-6">
+            <div>
+              <HCaptcha
+                sitekey="bf4c7345-d958-4be7-9ec9-801de19c25bf"
+                onChange={handleCaptchaChange}
+              />
+              {errors.captcha && (
+                <span className="error-text">{errors.captcha}</span>
+              )}
+            </div>
+            <div className="">
+              <button
+                type="submit"
+                className="px-10 py-2 bg-red text-white rounded-lg hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </form>
       </div>
