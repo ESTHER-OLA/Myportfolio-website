@@ -1,4 +1,4 @@
-# React + Vite
+# OLA ESTHER PELUMI - PORTFOLIO WEBSITE
 
 Meet Ola Esther Pelumi, a passionate Frontend Developer, WordPress specialist, and SEO enthusiast. With a solid background in HTML, CSS3, JavaScript, React.js, Tailwind CSS, and WordPress customization, including plugin integration and domain
 
