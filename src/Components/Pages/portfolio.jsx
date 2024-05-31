@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const portfolio = () => {
   return (
-    <div className="relative z-10 top-10 px-[3rem] py-[3rem] bounce">
+    <div className="relative z-10 top-10 px-[3rem] py-[3rem] fade-in">
       <div className="text-gold text-center text-3xl items-center font-eb-garamond">
         MY PROJECTS
       </div>

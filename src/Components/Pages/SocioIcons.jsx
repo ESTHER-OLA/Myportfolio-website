@@ -32,7 +32,7 @@ const SocioIcons = () => {
   };
 
   return (
-    <div className="flex flex-row gap-4 text-white">
+    <div className="flex flex-row gap-4 text-white bounce">
       <Link to="/" className="rotate">
         <FaLocationDot
           className="w-[20px] h-[20px]"

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const about = () => {
   return (
-    <div className="relative z-10 top-10 lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[12rem] px-2 lg:py-[5rem] lg:px-[10rem] text-white bounce">
+    <div className="relative z-10 top-10 lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[12rem] px-2 lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
         className="w-[35%] lg:h-[40vh] lg:ml-0 lg:pt-0 pt-8 ml-[8rem] lg:mt-[8rem] bounce"
         src={image}
