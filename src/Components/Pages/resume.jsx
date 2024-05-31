@@ -15,12 +15,12 @@ import { RiReactjsLine } from "react-icons/ri";
 
 const resume = () => {
   return (
-    <div className="relative z-10 top-[5rem] lg:top-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero bounce">
+    <div className="relative z-10 top-[6rem] lg:top-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero bounce">
       <div className="flex flex-col gap-2 items-start lg:mt-10 hero-text">
         <h1 className="text-4xl font-eb-garamond leading-3">Certifications</h1>
         <img className="w-[60%] pt-2" src={line} alt="" />
 
-        <div className="flex flex-row gap-5 py-4">
+        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
           <SiLiberadotchat className="w-5 h-5" />
           <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
@@ -35,7 +35,7 @@ const resume = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 py-4">
+        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
           <SiLiberadotchat className="w-5 h-5" />
           <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
@@ -50,7 +50,7 @@ const resume = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-4 py-4">
+        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
           <SiLiberadotchat className="w-5 h-5" />
           <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
@@ -65,7 +65,7 @@ const resume = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 py-4">
+        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
           <SiLiberadotchat className="w-5 h-5" />
           <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
@@ -80,7 +80,7 @@ const resume = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 py-4">
+        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
           <SiLiberadotchat className="w-5 h-5" />
           <div className="flex flex-col gap-3">
             <h5 className="text-xl leading-3 font-serif">
@@ -98,11 +98,11 @@ const resume = () => {
 
       <img className="lg:pl-[15rem] resume-img" src={image} alt="" />
 
-      <div className="lg:absolute lg:top-[33rem] lg:left-[20rem] flex flex-col gap-1 items-start">
+      <div className="lg:absolute lg:top-[33rem] lg:left-[20rem] flex flex-col gap-1 items-start grid2">
         <h1 className="text-4xl font-eb-garamond leading-3">Experience</h1>
         <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
 
-        <div className="flex flex-row gap-3 py-4">
+        <div className="flex flex-row gap-2 lg:gap-3 lg:py-4 py-3">
           <img
             src={heyjayTech}
             className="h-[20px] w-[60px] border-2 border-gold"
@@ -121,7 +121,7 @@ const resume = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-3 py-4">
+        <div className="flex flex-row gap-2 lg:gap-3 lg:py-4 py-3">
           <img
             src={techSolution}
             className="h-[20px] w-[60px] border-2 border-gold"
@@ -140,7 +140,7 @@ const resume = () => {
           </div>
         </div>
       </div>
-      <div className="lg:absolute lg:top-[32rem] lg:left-[60rem] flex flex-col gap-1 lg:pl-[15rem] items-start">
+      <div className="lg:absolute lg:top-[32rem] lg:left-[65rem] flex flex-col gap-1 lg:pl-[15rem] items-start grid3">
         <h1 className="text-4xl font-eb-garamond leading-3">Skill Sets</h1>
         <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
 
