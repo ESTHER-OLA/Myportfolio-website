@@ -223,6 +223,15 @@
   }
 }
 
+/* App.css */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1e2028; /*background color for loading screen */
+}
+
 input::placeholder {
   position: absolute;
   left: 40px;
