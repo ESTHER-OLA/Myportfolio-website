@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 const portfolio = () => {
   return (
-    <div className="relative z-10 top-10 px-[3rem] py-[3rem] fade-in">
+    <div className="relative z-10 top-10 px-[10rem] lg:px-[3rem] py-[3rem] fade-in portf0lio">
       <div className="text-gold text-center text-3xl items-center font-eb-garamond">
         MY PROJECTS
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 px-8 py-8 items-center justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-[40px] lg:gap-2 px-4 lg:px-8 py-8 items-center justify-center">
         <div className="flex flex-col gap-2 lg:gap-5">
           <Link to="https://c8-project.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
