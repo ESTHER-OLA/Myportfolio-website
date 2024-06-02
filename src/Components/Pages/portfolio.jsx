@@ -22,7 +22,7 @@ const portfolio = () => {
           </Link>
           <div className="items-center">
             <img
-              className="lg:h-[30vh] bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              className="lg:h-[30vh]  bg-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
               src={MealPal}
               alt="project-img"
             />
