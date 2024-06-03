@@ -204,11 +204,12 @@ const contact = () => {
               <span className="error-text">{errors.message}</span>
             )}
           </div>
-          <div className="flex flex-row gap-6">
-            <div>
+          <div className="flex flex-col lg:flex-row items-center gap-6">
+            <div className="w-full lg:w-auto">
               <HCaptcha
                 sitekey="bf4c7345-d958-4be7-9ec9-801de19c25bf"
                 onChange={handleCaptchaChange}
+                className="h-captcha w-full lg:w-auto"
               />
               {errors.captcha && (
                 <span className="error-text">{errors.captcha}</span>
