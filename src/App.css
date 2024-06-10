@@ -268,10 +268,10 @@
 @media (min-width: 424px) and (max-width: 971px) {
   .service {
     top: 5rem !important;
-    padding: 0 5px !important;
+    padding: 0 !important;
   }
   .service-item {
-    padding: 10px !important;
+    padding: 3px !important;
   }
 }
 /* App.css */
