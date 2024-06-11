@@ -37,7 +37,7 @@
   animation-delay: 0.6s;
 }
 
-@media (max-width: 998px) and (min-height: 671px) {
+/* @media (max-width: 998px) and (min-height: 671px) {
   .resume-hero {
     padding-bottom: 2.5rem;
     padding-left: 20px;
@@ -272,6 +272,12 @@
   }
   .service-item {
     padding: 3px !important;
+  }
+} */
+
+@media (max-width: 700px) {
+  .portfolio {
+    padding: 0.5rem !important;
   }
 }
 /* App.css */

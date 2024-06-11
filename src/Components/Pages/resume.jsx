@@ -15,8 +15,8 @@ import { RiReactjsLine } from "react-icons/ri";
 
 const resume = () => {
   return (
-    <div className="relative z-10 top-[6rem] lg:top-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero fade-in">
-      <div className="flex flex-col gap-2 items-start lg:mt-10 hero-text">
+    <div className="relative z-10 top-[6rem] pl-[10px] gap-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero fade-in">
+      <div className="flex flex-col gap-2 mt-3 items-start lg:mt-10 hero-text">
         <h1 className="text-4xl font-eb-garamond leading-3">Certifications</h1>
         <img className="w-[60%] pt-2" src={line} alt="" />
 
@@ -96,7 +96,11 @@ const resume = () => {
         </div>
       </div>
 
-      <img className="lg:pl-[15rem] resume-img" src={image} alt="" />
+      <img
+        className="lg:pl-[15rem] hidden lg:block resume-img"
+        src={image}
+        alt=""
+      />
 
       <div className="lg:absolute lg:top-[33rem] lg:left-[20rem] flex flex-col gap-1 items-start grid2">
         <h1 className="text-4xl font-eb-garamond leading-3">Experience</h1>
