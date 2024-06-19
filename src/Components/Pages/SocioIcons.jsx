@@ -39,17 +39,17 @@ const SocioIcons = () => {
           onClick={handleLocationClick}
         />
       </Link>
-      <Link to="/https://github.com/ESTHER-OLA" className="rotate">
+      <Link to="https://github.com/ESTHER-OLA" className="rotate">
         <FaGithub className="w-[20px] h-[20px]" />
       </Link>
-      <Link to="/https://twitter.com/P_tomiwa_" className="rotate">
+      <Link to="https://twitter.com/P_tomiwa_" className="rotate">
         <AiFillTwitterCircle className="w-[20px] h-[20px]" />
       </Link>
       <Link to="/linkedin.com/in/ola-esther-96255918b/" className="rotate">
         <FaLinkedin className="w-[20px] h-[20px]" />
       </Link>
       <Link
-        to="/https://www.instagram.com/realtecheo?igsh=amtlOTBqYzVvMjdm"
+        to="https://www.instagram.com/realtecheo?igsh=amtlOTBqYzVvMjdm"
         className="rotate"
       >
         <FaInstagram className="w-[20px] h-[20px]" />

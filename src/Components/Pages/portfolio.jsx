@@ -16,7 +16,7 @@ const portfolio = () => {
           MY PROJECTS
         </h1>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-[50px] gap-[10px] px-[2rem] lg:px-[6rem] py-[0] items-center justify-center port-img">
+      <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-[47px] gap-[10px] px-[2rem] lg:px-[6rem] py-[0] items-center justify-center port-img">
         <div className="flex flex-col gap-[5px] px-[1.5rem] py-[1rem]">
           <Link to="https://c8-project.vercel.app/" target="_blank">
             <button className="py-[0.2rem] px-[1.2rem] text-center text-sm text-white rounded-full border border-white bg-gold hover:bg-red transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
