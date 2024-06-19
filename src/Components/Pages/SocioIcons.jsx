@@ -45,7 +45,7 @@ const SocioIcons = () => {
       <Link to="https://twitter.com/P_tomiwa_" className="rotate">
         <AiFillTwitterCircle className="w-[20px] h-[20px]" />
       </Link>
-      <Link to="/linkedin.com/in/ola-esther-96255918b/" className="rotate">
+      <Link to="linkedin.com/in/ola-esther-96255918b/" className="rotate">
         <FaLinkedin className="w-[20px] h-[20px]" />
       </Link>
       <Link
