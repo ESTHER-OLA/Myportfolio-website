@@ -37,6 +37,29 @@
   animation-delay: 0.6s;
 }
 
+.img-grid {
+  width: 200px;
+  height: 100px;
+}
+
+.resume-img {
+  width: 100%;
+  height: auto;
+}
+
+.service-item {
+  width: 330px;
+  height: 200px;
+}
+
+@media (max-width: 670px) {
+  .service-item {
+    width: 180px;
+    height: 270px;
+    padding: 0 5px;
+  }
+}
+
 /* App.css */
 .loading-screen {
   display: flex;

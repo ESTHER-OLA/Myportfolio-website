@@ -15,80 +15,80 @@ import { RiReactjsLine } from "react-icons/ri";
 
 const resume = () => {
   return (
-    <div className="relative z-10 top-[6rem] pl-[10px] gap-[3rem] text-white grid lg:grid-cols-2  lg:gap-[5rem] lg:px-[20rem] lg:pb-[15rem] resume-hero fade-in">
-      <div className="flex flex-col gap-2 mt-3 items-start lg:mt-10 hero-text">
-        <h1 className="text-4xl font-eb-garamond leading-3">Certifications</h1>
-        <img className="w-[60%] pt-2" src={line} alt="" />
+    <div className="relative z-10 top-[5rem] lg:top-[2rem] gap-[20px] text-white grid grid-cols-1 lg:grid-cols-2 px-[10px] lg:px-[15rem] py-0 resume-hero fade-in">
+      <div className="flex flex-col gap-2 mt-3 items-start lg:mt-10 py-0 hero-text">
+        <h1 className="text-xl font-eb-garamond leading-3">Certifications</h1>
+        <img className="w-[40%]" src={line} alt="" />
 
-        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
-          <SiLiberadotchat className="w-5 h-5" />
+        <div className="flex flex-row gap-2 mb-2">
+          <SiLiberadotchat className="w-3 h-3" />
           <div className="flex flex-col gap-3">
-            <h5 className="text-xl leading-3 font-serif">
+            <h5 className="text-md leading-3 font-serif">
               Front-End Web Development
             </h5>
             <div className="flex flex-row gap-2">
-              <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif pt-2 leading-3">
+              <ClockLoader className="" color="#DA9100" size={12} />
+              <p className="text-sm text-gold font-serif leading-3">
                 Hertechtrail Academy
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
-          <SiLiberadotchat className="w-5 h-5" />
+        <div className="flex flex-row gap-2 mb-2">
+          <SiLiberadotchat className="w-3 h-3" />
           <div className="flex flex-col gap-3">
-            <h5 className="text-xl leading-3 font-serif">
+            <h5 className="text-md leading-3 font-serif">
               Diploma in Website Development & SEO
             </h5>
             <div className="flex flex-row gap-2">
-              <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif pt-2 leading-3">
+              <ClockLoader className="" color="#DA9100" size={12} />
+              <p className="text-sm text-gold font-serif leading-3">
                 Digital Marketing Skill Institute
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
-          <SiLiberadotchat className="w-5 h-5" />
+        <div className="flex flex-row gap-2 mb-2">
+          <SiLiberadotchat className="w-3 h-3" />
           <div className="flex flex-col gap-3">
-            <h5 className="text-xl leading-3 font-serif">
+            <h5 className="text-md leading-3 font-serif">
               Javascript Algorithms and Data Structures
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif pt-2 leading-3">
+              <p className="text-sm text-gold font-serif leading-3">
                 FreeCodeCamp
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
-          <SiLiberadotchat className="w-5 h-5" />
+        <div className="flex flex-row gap-2 mb-2">
+          <SiLiberadotchat className="w-3 h-3" />
           <div className="flex flex-col gap-3">
-            <h5 className="text-xl leading-3 font-serif">
+            <h5 className="text-md leading-3 font-serif">
               Responsive Web Design
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif pt-2 leading-3">
+              <p className="text-sm text-gold font-serif leading-3">
                 FreeCodeCamp
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row gap-3 py-3 lg:gap-5 lg:py-4">
-          <SiLiberadotchat className="w-5 h-5" />
+        <div className="flex flex-row gap-2 lg:mb-2">
+          <SiLiberadotchat className="w-3 h-3" />
           <div className="flex flex-col gap-3">
-            <h5 className="text-xl leading-3 font-serif">
+            <h5 className="text-md leading-3 font-serif">
               National Youth Service Corps
             </h5>
             <div className="flex flex-row gap-2">
               <ClockLoader color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif pt-2 leading-3">
+              <p className="text-sm text-gold font-serif leading-3">
                 NYSC Nigeria
               </p>
             </div>
@@ -96,72 +96,66 @@ const resume = () => {
         </div>
       </div>
 
-      <img
-        className="lg:pl-[15rem] hidden lg:block resume-img"
-        src={image}
-        alt=""
-      />
+      <div className="img-grid lg:ml-[7rem] mt-4 py-0">
+        <img className="hidden lg:block resume-img" src={image} alt="" />
+      </div>
 
-      <div className="lg:absolute lg:top-[33rem] lg:left-[20rem] flex flex-col gap-1 items-start grid2">
-        <h1 className="text-4xl font-eb-garamond leading-3">Experience</h1>
-        <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
+      <div className="flex flex-col gap-1 items-start grid2">
+        <h1 className="text-xl font-eb-garamond">Experience</h1>
+        <img className="w-[60%]" src={line} alt="" />
 
-        <div className="flex flex-row gap-2 lg:gap-3 lg:py-4 py-3">
+        <div className="flex flex-row gap-3 mt-2">
           <img
             src={heyjayTech}
             className="h-[20px] w-[60px] border-2 border-gold"
             alt=""
           />
-          <div className="flex flex-col gap-2">
-            <h5 className="text-xl leading-3 font-serif">
-              HeyJay Technologies
-            </h5>
+          <div className="flex flex-col">
+            <h5 className="text-md font-serif">HeyJay Technologies</h5>
             <div className="flex flex-row gap-2">
-              <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <ClockLoader className="mt-1" color="#DA9100" size={12} />
+              <p className="text-sm text-gold font-serif">
                 Technical Account Manager
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-row gap-2 lg:gap-3 lg:py-4 py-3">
+        <div className="flex flex-row gap-3">
           <img
             src={techSolution}
             className="h-[20px] w-[60px] border-2 border-gold"
             alt=""
           />
-          <div className="flex flex-col gap-2">
-            <h5 className="text-lg lg:text-xl leading-3 font-serif">
-              Tech Certify Solutions
-            </h5>
+          <div className="flex flex-col">
+            <h5 className="text-md font-serif">Tech Certify Solutions</h5>
             <div className="flex flex-row gap-2">
-              <ClockLoader className="pb-2" color="#DA9100" size={12} />
-              <p className="text-md text-gold font-serif leading-3">
+              <ClockLoader className="mt-1" color="#DA9100" size={12} />
+              <p className="text-sm text-gold font-serif">
                 Frontend Developer (Intern)
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="lg:absolute lg:top-[32rem] lg:left-[65rem] flex flex-col gap-1 lg:pl-[15rem] items-start grid3">
-        <h1 className="text-4xl font-eb-garamond leading-3">Skill Sets</h1>
-        <img className="w-[60%] pt-2 pb-4" src={line} alt="" />
+      <div className="flex flex-col gap-1 items-start lg:ml-[9rem] py-0 grid3">
+        <h1 className="text-xl font-eb-garamond">Skill Sets</h1>
+        <img className="w-[60%]" src={line} alt="" />
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 mt-2">
           <div className="flex flex-row gap-2">
             <FaHtml5 className="border border-gold" color="black" size={15} />
-            <p className="text-md text-white font-serif leading-3">HTML5</p>
+            <p className="text-sm text-white font-serif">HTML5</p>
           </div>
 
           <div className="flex flex-row gap-2">
             <SiCss3 className="border border-gold" color="black" size={15} />
-            <p className="text-md text-white font-serif leading-3">CSS3</p>
+            <p className="text-sm text-white font-serif">CSS3</p>
           </div>
 
           <div className="flex flex-row gap-2">
             <SiSass className="border border-gold" color="black" size={15} />
-            <p className="text-md text-white font-serif leading-3">SASS</p>
+            <p className="text-sm text-white font-serif">SASS</p>
           </div>
 
           <div className="flex flex-row gap-2">
@@ -170,9 +164,7 @@ const resume = () => {
               color="black"
               size={15}
             />
-            <p className="text-md text-white font-serif leading-3">
-              TailwindCss
-            </p>
+            <p className="text-sm text-white font-serif">TailwindCss</p>
           </div>
 
           <div className="flex flex-row gap-2">
@@ -181,9 +173,7 @@ const resume = () => {
               color="black"
               size={15}
             />
-            <p className="text-md text-white font-serif leading-3">
-              Javascript
-            </p>
+            <p className="text-sm text-white font-serif">Javascript</p>
           </div>
 
           <div className="flex flex-row gap-2">
@@ -192,7 +182,7 @@ const resume = () => {
               color="black"
               size={15}
             />
-            <p className="text-md text-white font-serif leading-3">React Js</p>
+            <p className="text-sm text-white font-serif">React Js</p>
           </div>
 
           <div className="flex flex-row gap-2">
@@ -201,7 +191,7 @@ const resume = () => {
               color="black"
               size={15}
             />
-            <p className="text-md text-white font-serif leading-3">Bootstrap</p>
+            <p className="text-sm text-white font-serif">Bootstrap</p>
           </div>
         </div>
       </div>

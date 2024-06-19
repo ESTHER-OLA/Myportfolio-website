@@ -7,7 +7,7 @@ import RotatingText from "react-rotating-text";
 const home = () => {
   return (
     <>
-      <div className="flex flex-col items-start relative z-10 top-8 text-white px-[5rem] py-[20rem] lg:py-[13rem] fade-in">
+      <div className="flex flex-col items-start relative z-10 top-8 text-white px-[5rem] py-[5rem] lg:py-[13rem] fade-in">
         <div className="">
           {" "}
           <h1 className="text-3xl text-yellow leading-[3rem] tracking-wide bounce">
@@ -39,7 +39,7 @@ const home = () => {
             </Link>
           </div>
         </div>
-        <div className=" absolute bottom-5 top-[50rem] lg:top-[45rem] fade-in">
+        <div className=" absolute bottom-5 top-[50rem] lg:top-[35rem] fade-in">
           <SocioIcons></SocioIcons>
         </div>
       </div>

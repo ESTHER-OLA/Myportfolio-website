@@ -96,7 +96,7 @@ const contact = () => {
   };
 
   return (
-    <div className="relative z-10 top-[4rem] left-0 right-0 px-[1.5rem] py-[1rem] fade-in">
+    <div className="relative z-10 top-[2rem] lg:top-[1.5rem] left-0 right-0 px-[3rem] py-[1rem] lg:ml-0 items-center justify-center fade-in">
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -110,9 +110,9 @@ const contact = () => {
         theme="colored"
         transition:Bounce
       />
-      <div className="flex flex-col gap-4 items-center">
-        <div className="flex flex-row gap-2">
-          <BiSolidContact className="text-gold w-[35px] h-[35px]" />
+      <div className="flex flex-col gap-4 items-center justify-center">
+        <div className="flex flex-row gap-2 items-center">
+          <BiSolidContact className="text-gold w-[35px] h-[35px] mt-3" />
           <h2 className="text-white text-xl font-eb-garamond lg:tracking-wider mt-3">
             Let's connect — Let's embark on a journey together
           </h2>
@@ -204,12 +204,12 @@ const contact = () => {
               <span className="error-text">{errors.message}</span>
             )}
           </div>
-          <div className="flex flex-col lg:flex-row items-center gap-6">
-            <div className="w-full lg:w-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
+            <div className="lg:w-auto">
               <HCaptcha
                 sitekey="bf4c7345-d958-4be7-9ec9-801de19c25bf"
                 onChange={handleCaptchaChange}
-                className="h-captcha w-full lg:w-auto"
+                className="h-captcha lg:w-auto"
               />
               {errors.captcha && (
                 <span className="error-text">{errors.captcha}</span>
