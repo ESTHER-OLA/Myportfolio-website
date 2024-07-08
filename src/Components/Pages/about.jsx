@@ -7,7 +7,7 @@ const about = () => {
   return (
     <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 lg:h-screen py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
-        className="w-[35%] lg:h-[40vh] lg:mt-[8rem] bounce"
+        className="w-[35%] lg:h-[40vh] ml-[20px] lg:ml-0 lg:mt-[8rem] bounce"
         src={image}
         alt=""
       />

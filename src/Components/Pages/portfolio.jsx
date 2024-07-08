@@ -114,7 +114,7 @@ const portfolio = () => {
         </div>
       </div>
       <div>
-        <div className="lg:mt-3">
+        <div className="mt-3">
           <p className="text-md  text-gold leading-none tracking-wide fade-in">
             <RotatingText
               items={[
