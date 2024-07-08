@@ -10,7 +10,7 @@ import RotatingText from "react-rotating-text";
 
 const portfolio = () => {
   return (
-    <div className="fade-in portfolio bg-black bg-opacity-75 h-screen px-[2rem] py-[3px] lg:px-[7rem] lg:py-[0.5rem]">
+    <div className="fade-in portfolio bg-black bg-opacity-75 h-screen px-[2rem] py-[3px] lg:px-[10rem] lg:py-[0.5rem]">
       <div className="">
         <h1 className="text-gold text-center text-xl items-center font-eb-garamond">
           MY PROJECTS

@@ -97,7 +97,7 @@ const contact = () => {
   };
 
   return (
-    <div className="items-center bg-black bg-opacity-75 h-screen lg:py-[3px] lg:px-[3rem] p-[5px] justify-center fade-in">
+    <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
       <ToastContainer
         position="top-right"
         autoClose={5000}
