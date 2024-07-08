@@ -15,8 +15,8 @@ import { RiReactjsLine } from "react-icons/ri";
 
 const resume = () => {
   return (
-    <div className="relative z-10 top-[5rem] lg:top-[2rem] gap-[20px] text-white grid grid-cols-1 lg:grid-cols-2 px-[10px] lg:px-[15rem] py-0 resume-hero fade-in">
-      <div className="flex flex-col gap-2 mt-3 items-start lg:mt-10 py-0 hero-text">
+    <div className="bg-black bg-opacity-75 h-screen text-white grid grid-cols-1 lg:grid-cols-2 lg:gap-[20px] px-[10px] py-[5px] lg:px-[15rem] resume-hero fade-in">
+      <div className="flex flex-col gap-2 items-start  hero-text">
         <h1 className="text-xl font-eb-garamond leading-3">Certifications</h1>
         <img className="w-[40%]" src={line} alt="" />
 
@@ -96,8 +96,8 @@ const resume = () => {
         </div>
       </div>
 
-      <div className="img-grid lg:ml-[7rem] mt-4 py-0">
-        <img className="hidden lg:block resume-img" src={image} alt="" />
+      <div className="img-grid lg:ml-[7rem] lg:mt-4">
+        <img className="hidden lgblock resume-img" src={image} alt="" />
       </div>
 
       <div className="flex flex-col gap-1 items-start grid2">
@@ -138,11 +138,11 @@ const resume = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-1 items-start lg:ml-[9rem] py-0 grid3">
+      <div className="flex flex-col gap-1 items-start lg:ml-[9rem]">
         <h1 className="text-xl font-eb-garamond">Skill Sets</h1>
         <img className="w-[60%]" src={line} alt="" />
 
-        <div className="flex flex-col gap-2 mt-2">
+        <div className="lg:flex lg:flex-col grid grid-cols-3 gap-2 mt-2">
           <div className="flex flex-row gap-2">
             <FaHtml5 className="border border-gold" color="black" size={15} />
             <p className="text-sm text-white font-serif">HTML5</p>

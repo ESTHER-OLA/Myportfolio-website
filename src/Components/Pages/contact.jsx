@@ -93,10 +93,11 @@ const contact = () => {
       });
     }
     e.target.reset();
+    console.log("message sent");
   };
 
   return (
-    <div className="relative z-10 top-[2rem] lg:top-[1.5rem] left-0 right-0 px-[3rem] py-[1rem] lg:ml-0 items-center justify-center fade-in">
+    <div className="items-center bg-black bg-opacity-75 h-screen lg:py-[3px] lg:px-[3rem] p-[5px] justify-center fade-in">
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -110,7 +111,7 @@ const contact = () => {
         theme="colored"
         transition:Bounce
       />
-      <div className="flex flex-col gap-4 items-center justify-center">
+      <div className="flex flex-col gap-2 items-center justify-center">
         <div className="flex flex-row gap-2 items-center">
           <BiSolidContact className="text-gold w-[35px] h-[35px] mt-3" />
           <h2 className="text-white text-xl font-eb-garamond lg:tracking-wider mt-3">

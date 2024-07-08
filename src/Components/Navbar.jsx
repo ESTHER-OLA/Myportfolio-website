@@ -21,7 +21,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="fixed z-50 h-[6vh] top-0 left-0 right-0 flex flex-rows p-2 justify-between items-center bg-black font-eb-garamond md:border-b-0 border-transparent border-b-white">
+      <nav className="lg:h-[6vh] w-full flex flex-rows p-2 justify-between items-center bg-black font-eb-garamond md:border-b-0 border-transparent border-b-white">
         <div className="">
           <img src={logo} alt="logo-img" className="h-[30px] w-[50px]" />
         </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
           </button>
         </div>
         {isOpen && (
-          <div className="fixed top-[53px] h-[35vh] w-[38vw] flex flex-col bg-black gap-2 justify-start py-4 px-3 transition-transform transform ease-in-out duration-300 sidebar">
+          <div className="fixed h-[55vh] w-[38vw] top-[2rem] flex flex-col bg-black gap-2 justify-start transition-transform transform ease-in-out duration-300 sidebar">
             <Link
               to="/"
               className={`nav-link ${

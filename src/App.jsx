@@ -24,17 +24,17 @@ const App = () => {
           <HashLoader size={150} color={"#DA9100"} loading={loading} />
         </div>
       ) : (
-        <div className="relative h-screen">
-          <div
-            className="absolute bg inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${backgroundImage})`,
-              opacity: "0.8",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-black opacity-85"></div>
+        <div
+          className="min-h-screen bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundColor: "rgb(50, 53, 64)",
+          }}
+        >
           <Navbar></Navbar>
           <Pages></Pages>
+          {/* <div className="flex items-center justify-center min-h-screen ">
+          </div> */}
         </div>
       )}
       <Footer></Footer>

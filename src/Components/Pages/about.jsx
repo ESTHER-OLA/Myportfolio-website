@@ -5,25 +5,21 @@ import { Link } from "react-router-dom";
 
 const about = () => {
   return (
-    <div className="relative z-10 top-[1rem] lg:top-10 lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[12rem] px-2 lg:py-[5rem] lg:px-[10rem] text-white fade-in">
+    <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 lg:h-screen py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
-        className="w-[35%] lg:h-[40vh] lg:ml-0 lg:pt-0 pt-8 ml-[8rem] lg:mt-[8rem] bounce"
+        className="w-[35%] lg:h-[40vh] lg:mt-[8rem] bounce"
         src={image}
         alt=""
       />
-      <div className="flex flex-col gap-2 mt-3 lg:mt-10 bounce">
+      <div className="flex flex-col gap-2 lg:mt-10 bounce">
         <h1 className="text-white leading-10 text-4xl font-eb-garamond font-bold mx-[30%] lg:mx-[40%] bounce">
           ABOUT
         </h1>
-        <img
-          className="w-[45%] mx-[20%] lg:mx-[25%] fade-in"
-          src={lineBorder}
-          alt=""
-        />
-        <h5 className="text-yellow lg:leading-8 text-xl font-eb-garamond font-normal text-center w-[80%] lg:w-0 lg:font-medium px-10 ml-8 lg:ml-0 lg:text-nowrap lg:px-[4rem] fade-in">
+        <img className="lg:mx-[25%] fade-in" src={lineBorder} alt="" />
+        <h5 className="text-yellow lg:leading-8 text-xl font-eb-garamond font-normal text-center lg:font-medium lg:text-nowrap lg:px-[4rem] fade-in">
           Frontend Developer | WordPress Website Developer | SEO Specialist
         </h5>
-        <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-medium font-eb-garamond lg:mx-0 py-5 px-6 lg:py-3 lg:px-8 fade-in">
+        <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
           Meet Ola Esther Pelumi, a passionate Frontend Developer, WordPress
           specialist, and SEO enthusiast. With a solid background in HTML, CSS3,
           JavaScript, React.js, Tailwind CSS, and WordPress customization,
