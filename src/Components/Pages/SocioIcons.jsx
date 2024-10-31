@@ -10,7 +10,7 @@ import { MdOutlineWifiCalling } from "react-icons/md";
 
 const SocioIcons = () => {
   const handleLocationClick = () => {
-    const address = "Bashua street Shomolu Lagos, Lagos State, Nigeria";
+    const address = "Lagos State, Nigeria";
     const mapUrl = `https://www.google.com/maps/place/${encodeURIComponent(
       address
     )}`;
@@ -21,7 +21,6 @@ const SocioIcons = () => {
     const emailAddress = "estheolowo2018@gmail.com";
     const subject = "Subject of the email";
     const body = "Body of the email";
-
     window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
   };
 
@@ -33,39 +32,43 @@ const SocioIcons = () => {
 
   return (
     <div className="flex flex-row gap-4 text-white bounce">
-      <Link to="/" className="rotate">
-        <FaLocationDot
-          className="w-[20px] h-[20px]"
-          onClick={handleLocationClick}
-        />
-      </Link>
-      <Link to="https://github.com/ESTHER-OLA" className="rotate">
+      <span onClick={handleLocationClick} className="rotate cursor-pointer">
+        <FaLocationDot className="w-[20px] h-[20px]" />
+      </span>
+      <a
+        href="https://github.com/ESTHER-OLA"
+        target="_blank"
+        className="rotate"
+      >
         <FaGithub className="w-[20px] h-[20px]" />
-      </Link>
-      <Link to="https://twitter.com/P_tomiwa_" className="rotate">
+      </a>
+      <a
+        href="https://twitter.com/P_tomiwa_"
+        target="_blank"
+        className="rotate"
+      >
         <AiFillTwitterCircle className="w-[20px] h-[20px]" />
-      </Link>
-      <Link to="linkedin.com/in/ola-esther-96255918b/" className="rotate">
+      </a>
+      <a
+        href="https://linkedin.com/in/ola-esther-96255918b/"
+        target="_blank"
+        className="rotate"
+      >
         <FaLinkedin className="w-[20px] h-[20px]" />
-      </Link>
-      <Link
-        to="https://www.instagram.com/realtecheo?igsh=amtlOTBqYzVvMjdm"
+      </a>
+      <a
+        href="https://www.instagram.com/realtecheo?igsh=amtlOTBqYzVvMjdm"
+        target="_blank"
         className="rotate"
       >
         <FaInstagram className="w-[20px] h-[20px]" />
-      </Link>
-      <Link to="/" className="rotate">
-        <AiTwotoneMail
-          className="w-[20px] h-[20px]"
-          onClick={handleEmailClick}
-        />
-      </Link>
-      <Link to="/#" className="rotate">
-        <MdOutlineWifiCalling
-          className="w-[20px] h-[20px]"
-          onClick={handleCallClick}
-        />
-      </Link>
+      </a>
+      <span onClick={handleEmailClick} className="rotate cursor-pointer">
+        <AiTwotoneMail className="w-[20px] h-[20px]" />
+      </span>
+      <span onClick={handleCallClick} className="rotate cursor-pointer">
+        <MdOutlineWifiCalling className="w-[20px] h-[20px]" />
+      </span>
     </div>
   );
 };

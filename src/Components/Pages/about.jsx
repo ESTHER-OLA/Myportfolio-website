@@ -7,11 +7,11 @@ const about = () => {
   return (
     <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 lg:h-screen py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
-        className="w-[35%] lg:h-[40vh] ml-[20px] lg:ml-0 lg:mt-[8rem] bounce"
+        className="w-[35%] lg:h-[40vh] ml-[20px] lg:ml-0 lg:mt-[3rem] bounce"
         src={image}
         alt=""
       />
-      <div className="flex flex-col gap-2 lg:mt-10 bounce">
+      <div className="flex flex-col gap-2 bounce">
         <h1 className="text-white leading-10 text-4xl font-eb-garamond font-bold mx-[30%] lg:mx-[40%] bounce">
           ABOUT
         </h1>
@@ -20,19 +20,22 @@ const about = () => {
           Frontend Developer | WordPress Website Developer | SEO Specialist
         </h5>
         <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
-          Meet Ola Esther Pelumi, a passionate Frontend Developer, WordPress
-          specialist, and SEO enthusiast. With a solid background in HTML, CSS3,
-          JavaScript, React.js, Tailwind CSS, and WordPress customization,
-          including plugin integration and domain management, I've honed my
-          skills through certified training and hands-on projects. I thrive on
-          crafting responsive and engaging websites and applications. Currently,
-          I'm eagerly seeking intern or entry-level opportunities to further my
-          development journey and eventually transition into a full-stack
-          developer role. My portfolio showcases my commitment to creating
-          user-friendly and visually captivating digital experiences. I am
-          dedicated to continuous learning and growth in the dynamic world of
-          web development. Let's connect and explore how we can collaborate on
-          exciting projects!
+          I’m Esther Ola, a dedicated Frontend Developer with expertise in
+          JavaScript, React, and frameworks like Next.js and Redux Toolkit. My
+          work at NXG Hub and Hertechtrail Academy reflects a commitment to
+          creating responsive, user-focused applications, from job listing
+          platforms with robust admin features to community-driven meal planning
+          apps. Each project is crafted with precision, blending design and
+          functionality to deliver high-performance, intuitive user experiences.
+        </p>
+        <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
+          With certifications from HerTechTrail Academy and freeCodeCamp, along
+          with specialized training in WordPress Development and SEO, I bring a
+          comprehensive skill set that covers modern web technologies. My
+          approach emphasizes seamless API integrations, enhanced UX/UI, and
+          mobile responsiveness. I am always eager to collaborate with
+          innovative teams to elevate digital experiences and consistently
+          deliver impactful solutions.
         </p>
         <div className="flex flex-row gap-2 lg:gap-5">
           <Link to="/resume">

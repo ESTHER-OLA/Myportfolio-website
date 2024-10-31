@@ -6,6 +6,7 @@ import ClockLoader from "react-spinners/ClockLoader";
 import image from "../../assets/images/profile.png";
 import heyjayTech from "../../assets/images/heyjaytech-logo.png";
 import techSolution from "../../assets/images/techSolution.jpeg";
+import NXGLogo from "../../assets/images/NXG-logo.jpg";
 import { SiCss3 } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
@@ -103,6 +104,23 @@ const resume = () => {
       <div className="flex flex-col gap-1 items-start grid2">
         <h1 className="text-xl font-eb-garamond">Experience</h1>
         <img className="w-[60%]" src={line} alt="" />
+
+        <div className="flex flex-row gap-3 mt-2">
+          <img
+            src={NXGLogo}
+            className="h-[20px] w-[60px] border-2 border-gold"
+            alt=""
+          />
+          <div className="flex flex-col">
+            <h5 className="text-md font-serif">NXG Technology Hub</h5>
+            <div className="flex flex-row gap-2">
+              <ClockLoader className="mt-1" color="#DA9100" size={12} />
+              <p className="text-sm text-gold font-serif">
+                Frontend Developer
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="flex flex-row gap-3 mt-2">
           <img
