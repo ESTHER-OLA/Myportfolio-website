@@ -47,7 +47,7 @@ const Contact = () => {
     console.log("Captcha token:", value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = {};
     if (!formData.name.trim()) {
@@ -69,60 +69,39 @@ const Contact = () => {
     }
     if (!captchaToken) {
       validationErrors.captcha = "Please complete the CAPTCHA";
-      setErrors(validationErrors);
     }
     if (Object.keys(validationErrors).length === 0) {
-      // You can use fetch to send the form data to Netlify
-      const formData = new FormData(form.current);
-      fetch("/", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      })
-        .then(() => {
+      const formDataNetlify = new FormData(form.current);
+  
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          body: formDataNetlify,
+        });
+  
+        if (response.ok) {
           toast.success("MESSAGE SENT!");
-          // Reset form fields
+          console.log("form sent successfully")
           setFormData({
             name: "",
             email: "",
             number: "",
             message: "",
           });
-          e.target.reset(); // Resetting the form after submission
-        })
-        .catch((error) => {
+          form.current.reset(); // Reset form
+        } else {
           toast.error("MESSAGE FAILED TO SEND...");
-          console.error(error);
-        });
+          console.log("error sending form for submission")
+        }
+      } catch (error) {
+        toast.error("MESSAGE FAILED TO SEND...");
+        console.error(error);
+        console.log(error.response)
+      }
     } else {
       setErrors(validationErrors);
     }
   };
-  // if (Object.keys(validationErrors).length === 0) {
-  //   emailjs
-  //     .sendForm("service_ifrjlza", "template_gbpicfx", form.current, {
-  //       publicKey: "iYdDXRPaMdqaVpCgc",
-  //     })
-  //       .then(
-  //         () => {
-  //           toast.success("MESSAGE SENT!");
-  //         },
-  //         (error) => {
-  //           toast.error("MESSAGE FAIL TO SEND...", error.text);
-  //         }
-  //       );
-  //     // Reset form fields and PhoneInput value
-  //     setFormData({
-  //       name: "",
-  //       email: "",
-  //       number: "",
-  //       message: "",
-  //     });
-  //   }
-  //   e.target.reset();
-  //   console.log("message sent");
-  // };
-
   return (
     <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
       <ToastContainer
@@ -167,12 +146,15 @@ const Contact = () => {
                 name="name"
                 id="name"
                 type="text"
+                value={formData.name}
                 placeholder="Hungry Helen"
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
             </div>
-            {errors.name && <span className="error-text">{errors.name}</span>}
+            {errors.name && (
+              <span className="error-text text-red-700">{errors.name}</span>
+            )}
           </div>
           <div>
             <label
@@ -187,12 +169,15 @@ const Contact = () => {
                 name="email"
                 id="email"
                 type="text"
+                value={formData.email}
                 placeholder="hungryhelen@gmail.com"
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
             </div>
-            {errors.email && <span className="error-text">{errors.email}</span>}
+            {errors.email && (
+              <span className="error-text text-red-700">{errors.email}</span>
+            )}
           </div>
           <div>
             <label
@@ -214,7 +199,7 @@ const Contact = () => {
             </div>
 
             {errors.number && (
-              <span className="error-text">{errors.number}</span>
+              <span className="error-text text-red-700">{errors.number}</span>
             )}
           </div>
           <div>
@@ -229,13 +214,14 @@ const Contact = () => {
               <textarea
                 name="message"
                 id="message"
+                value={formData.message}
                 placeholder="my message goes here....."
                 className="w-[75vw] lg:w-[45vw] h-[20vh] px-[3.2rem] py-3 mb-5 bg-gray input"
                 onChange={handleChange}
               ></textarea>
             </div>
             {errors.message && (
-              <span className="error-text">{errors.message}</span>
+              <span className="error-text text-red-700">{errors.message}</span>
             )}
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
@@ -246,7 +232,9 @@ const Contact = () => {
                 className="h-captcha lg:w-auto"
               />
               {errors.captcha && (
-                <span className="error-text">{errors.captcha}</span>
+                <span className="error-text text-red-700">
+                  {errors.captcha}
+                </span>
               )}
             </div>
             <div className="">

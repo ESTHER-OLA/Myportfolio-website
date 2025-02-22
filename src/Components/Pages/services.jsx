@@ -8,7 +8,7 @@ import { TbSeo } from "react-icons/tb";
 
 const services = () => {
   return (
-    <div className="bg-black bg-opacity-75 h-screen items-center justify-center lg:py-[3rem] lg:px-[5rem] py-[8px] px-[15px] service bounce">
+    <div className="bg-black bg-opacity-75 lg:h-screen items-center justify-center lg:py-[3rem] lg:px-[5rem] py-[8px] px-[15px] service bounce">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-[20px] items-center justify-center service-grid">
         <div className="flex flex-col gap-4 items-start border border-white lg:p-[1.5rem] p-[0.8rem] service-item">
           <div className="flex flex-row gap-4">

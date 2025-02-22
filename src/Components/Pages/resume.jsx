@@ -115,9 +115,7 @@ const resume = () => {
             <h5 className="text-md font-serif">NXG Technology Hub</h5>
             <div className="flex flex-row gap-2">
               <ClockLoader className="mt-1" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif">
-                Frontend Developer
-              </p>
+              <p className="text-sm text-gold font-serif">Frontend Developer</p>
             </div>
           </div>
         </div>
