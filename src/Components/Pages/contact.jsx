@@ -8,14 +8,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PhoneInput from "react-phone-number-input";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import "react-phone-number-input/style.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import ReCAPTCHA from "react-google-recaptcha";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 
-const contact = () => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,8 +43,8 @@ const contact = () => {
   };
 
   const handleCaptchaChange = (value) => {
-    setCaptchaToken(token);
-    console.log("Captcha token:", token);
+    setCaptchaToken(value);
+    console.log("Captcha token:", value);
   };
 
   const handleSubmit = (e) => {
@@ -72,29 +72,56 @@ const contact = () => {
       setErrors(validationErrors);
     }
     if (Object.keys(validationErrors).length === 0) {
-      emailjs
-        .sendForm("service_ifrjlza", "template_gbpicfx", form.current, {
-          publicKey: "iYdDXRPaMdqaVpCgc",
+      // You can use fetch to send the form data to Netlify
+      const formData = new FormData(form.current);
+      fetch("/", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      })
+        .then(() => {
+          toast.success("MESSAGE SENT!");
+          // Reset form fields
+          setFormData({
+            name: "",
+            email: "",
+            number: "",
+            message: "",
+          });
+          e.target.reset(); // Resetting the form after submission
         })
-        .then(
-          () => {
-            toast.success("MESSAGE SENT!");
-          },
-          (error) => {
-            toast.error("MESSAGE FAIL TO SEND...", error.text);
-          }
-        );
-      // Reset form fields and PhoneInput value
-      setFormData({
-        name: "",
-        email: "",
-        number: "",
-        message: "",
-      });
+        .catch((error) => {
+          toast.error("MESSAGE FAILED TO SEND...");
+          console.error(error);
+        });
+    } else {
+      setErrors(validationErrors);
     }
-    e.target.reset();
-    console.log("message sent");
   };
+  // if (Object.keys(validationErrors).length === 0) {
+  //   emailjs
+  //     .sendForm("service_ifrjlza", "template_gbpicfx", form.current, {
+  //       publicKey: "iYdDXRPaMdqaVpCgc",
+  //     })
+  //       .then(
+  //         () => {
+  //           toast.success("MESSAGE SENT!");
+  //         },
+  //         (error) => {
+  //           toast.error("MESSAGE FAIL TO SEND...", error.text);
+  //         }
+  //       );
+  //     // Reset form fields and PhoneInput value
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       number: "",
+  //       message: "",
+  //     });
+  //   }
+  //   e.target.reset();
+  //   console.log("message sent");
+  // };
 
   return (
     <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
@@ -121,9 +148,15 @@ const contact = () => {
 
         <form
           ref={form}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="hiddenField"
           className="relative top-0 right-0 left-0 flex flex-col"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="hiddenField" />
           <div>
             <label htmlFor="name" className="text-gold font-lg font-serif">
               Name
@@ -231,4 +264,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
