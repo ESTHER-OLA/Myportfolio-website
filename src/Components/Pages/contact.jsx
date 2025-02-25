@@ -44,7 +44,7 @@ const Contact = () => {
 
   const handleCaptchaChange = (value) => {
     setCaptchaToken(value);
-    console.log("Captcha token:", value);
+    console.log("Captcha token received:", value);
   };
 
   const handleSubmit = async (e) => {
@@ -72,16 +72,17 @@ const Contact = () => {
     }
     if (Object.keys(validationErrors).length === 0) {
       const formDataNetlify = new FormData(form.current);
-  
+      formDataNetlify.append("h-captcha-response", captchaToken);
+
       try {
         const response = await fetch("/", {
           method: "POST",
           body: formDataNetlify,
         });
-  
+
         if (response.ok) {
           toast.success("MESSAGE SENT!");
-          console.log("form sent successfully")
+          console.log("form sent successfully");
           setFormData({
             name: "",
             email: "",
@@ -91,12 +92,12 @@ const Contact = () => {
           form.current.reset(); // Reset form
         } else {
           toast.error("MESSAGE FAILED TO SEND...");
-          console.log("error sending form for submission")
+          console.log("error sending form for submission");
         }
       } catch (error) {
         toast.error("MESSAGE FAILED TO SEND...");
         console.error(error);
-        console.log(error.response)
+        console.log(error.response);
       }
     } else {
       setErrors(validationErrors);
@@ -228,7 +229,7 @@ const Contact = () => {
             <div className="lg:w-auto">
               <HCaptcha
                 sitekey="bf4c7345-d958-4be7-9ec9-801de19c25bf"
-                onChange={handleCaptchaChange}
+                onVerify={handleCaptchaChange}
                 className="h-captcha lg:w-auto"
               />
               {errors.captcha && (
