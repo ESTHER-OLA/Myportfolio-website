@@ -1,11 +1,7 @@
 # OLA ESTHER PELUMI - PORTFOLIO WEBSITE
 
-Meet Ola Esther Pelumi, a passionate Frontend Developer, WordPress specialist, and SEO enthusiast. With a solid background in HTML, CSS3, JavaScript, React.js, Tailwind CSS, and WordPress customization, including plugin integration and domain
+I’m Esther Ola, a dedicated Frontend Developer with expertise in JavaScript, React, and frameworks like Next.js and Redux Toolkit. My work at NXG Hub and Hertechtrail Academy reflects a commitment to creating responsive, user-focused applications, from job listing platforms with robust admin features to community-driven meal planning apps. Each project is crafted with precision, blending design and functionality to deliver high-performance, intuitive user experiences.
 
-management, I've honed my skills through certified training and hands-on projects. I thrive on crafting responsive and engaging websites and applications. Currently, I'm eagerly seeking intern or entry-level opportunities to further my
-
-development journey and eventually transition into a full-stack developer role. My portfolio showcases my commitment to creating user-friendly and visually captivating digital experiences. I am dedicated to continuous learning and growth in
-
-the dynamic world of web development. Let's connect and explore how we can collaborate on exciting projects!
+With certifications from HerTechTrail Academy and freeCodeCamp, along with specialized training in WordPress Development and SEO, I bring a comprehensive skill set that covers modern web technologies. My approach emphasizes seamless API integrations, enhanced UX/UI, and mobile responsiveness. I am always eager to collaborate with innovative 
 
 ### [visit my website](https://myportfolio-website-two.vercel.app/)
