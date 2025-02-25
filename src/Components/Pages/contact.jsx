@@ -76,10 +76,13 @@ const Contact = () => {
       formDataNetlify.append("h-captcha-response", captchaToken);
 
       try {
-        const response = await fetch("/?no-cache=1", {
-          method: "POST",
-          body: formDataNetlify,
-        });
+        const response = await fetch(
+          "/https://esther-portfolio-website.netlify.app/contact",
+          {
+            method: "POST",
+            body: formDataNetlify,
+          }
+        );
 
         if (response.ok) {
           toast.success("MESSAGE SENT!");
