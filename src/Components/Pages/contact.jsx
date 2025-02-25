@@ -72,10 +72,11 @@ const Contact = () => {
     }
     if (Object.keys(validationErrors).length === 0) {
       const formDataNetlify = new FormData(form.current);
+      formDataNetlify.append("form-name", "contact");
       formDataNetlify.append("h-captcha-response", captchaToken);
 
       try {
-        const response = await fetch("/", {
+        const response = await fetch("/?no-cache=1", {
           method: "POST",
           body: formDataNetlify,
         });
@@ -92,11 +93,11 @@ const Contact = () => {
           form.current.reset(); // Reset form
         } else {
           toast.error("MESSAGE FAILED TO SEND...");
-          console.log("error sending form for submission");
+          console.log("error sending form for submission", response.statusText);
         }
       } catch (error) {
         toast.error("MESSAGE FAILED TO SEND...");
-        console.error(error);
+        console.error("Fetch error:", error);
         console.log(error.response);
       }
     } else {
