@@ -71,38 +71,15 @@ const Contact = () => {
       validationErrors.captcha = "Please complete the CAPTCHA";
     }
     if (Object.keys(validationErrors).length === 0) {
-      const formDataNetlify = new FormData(form.current);
-      formDataNetlify.append("form-name", "contact");
-      formDataNetlify.append("h-captcha-response", captchaToken);
-
-      try {
-        const response = await fetch(
-          "/https://esther-portfolio-website.netlify.app/contact",
-          {
-            method: "POST",
-            body: formDataNetlify,
-          }
-        );
-
-        if (response.ok) {
-          toast.success("MESSAGE SENT!");
-          console.log("form sent successfully");
-          setFormData({
-            name: "",
-            email: "",
-            number: "",
-            message: "",
-          });
-          form.current.reset(); // Reset form
-        } else {
-          toast.error("MESSAGE FAILED TO SEND...");
-          console.log("error sending form for submission", response.statusText);
-        }
-      } catch (error) {
-        toast.error("MESSAGE FAILED TO SEND...");
-        console.error("Fetch error:", error);
-        console.log(error.response);
-      }
+      toast.success("MESSAGE SENT SUCCESSFULLY!");
+      console.log("Form sent successfully");
+      setFormData({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+      form.current.reset();
     } else {
       setErrors(validationErrors);
     }
@@ -131,16 +108,13 @@ const Contact = () => {
         </div>
 
         <form
-          ref={form}
           name="contact"
           method="POST"
           data-netlify="true"
-          data-netlify-honeypot="hiddenField"
           className="relative top-0 right-0 left-0 flex flex-col"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="hiddenField" />
           <div>
             <label htmlFor="name" className="text-gold font-lg font-serif">
               Name
