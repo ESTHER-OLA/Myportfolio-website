@@ -159,7 +159,6 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
-              <input type="hidden" name="name" value={formData.name} />
             </div>
             {errors.name && (
               <span className="error-text text-red-700">{errors.name}</span>
@@ -183,7 +182,6 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
-              <input type="hidden" name="email" value={formData.email} />
             </div>
             {errors.email && (
               <span className="error-text text-red-700">{errors.email}</span>
@@ -206,9 +204,7 @@ const Contact = () => {
                 onChange={handlePhoneChange}
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
               />
-              <input type="hidden" name="number" value={formData.number} />
             </div>
-
             {errors.number && (
               <span className="error-text text-red-700">{errors.number}</span>
             )}
@@ -230,7 +226,6 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] h-[20vh] px-[3.2rem] py-3 mb-5 bg-gray input"
                 onChange={handleChange}
               ></textarea>
-              <input type="hidden" name="message" value={formData.message} />
             </div>
             {errors.message && (
               <span className="error-text text-red-700">{errors.message}</span>
