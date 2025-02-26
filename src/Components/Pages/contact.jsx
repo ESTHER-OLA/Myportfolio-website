@@ -70,20 +70,46 @@ const Contact = () => {
     if (!captchaToken) {
       validationErrors.captcha = "Please complete the CAPTCHA";
     }
-    if (Object.keys(validationErrors).length === 0) {
+    // Submit form data to Netlify
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append("form-name", "contact");
+    formDataToSubmit.append("name", formData.name);
+    formDataToSubmit.append("email", formData.email);
+    formDataToSubmit.append("number", formData.number);
+    formDataToSubmit.append("message", formData.message);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        body: formDataToSubmit,
+      });
+
       toast.success("MESSAGE SENT SUCCESSFULLY!");
-      console.log("Form sent successfully");
       setFormData({
         name: "",
         email: "",
         number: "",
         message: "",
       });
-      form.current.reset();
-    } else {
-      setErrors(validationErrors);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Failed to send message. Please try again.");
     }
   };
+
+  //   if (Object.keys(validationErrors).length === 0) {
+  //     toast.success("MESSAGE SENT SUCCESSFULLY!");
+  //     console.log("Form sent successfully");
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       number: "",
+  //       message: "",
+  //     });
+  //   } else {
+  //     setErrors(validationErrors);
+  //   }
+  // };
   return (
     <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
       <ToastContainer
@@ -108,6 +134,7 @@ const Contact = () => {
         </div>
 
         <form
+          ref={form}
           name="contact"
           method="POST"
           data-netlify="true"
@@ -130,6 +157,7 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
+              <input type="hidden" name="name" value={formData.name} />
             </div>
             {errors.name && (
               <span className="error-text text-red-700">{errors.name}</span>
@@ -153,6 +181,7 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
                 onChange={handleChange}
               />
+              <input type="hidden" name="email" value={formData.email} />
             </div>
             {errors.email && (
               <span className="error-text text-red-700">{errors.email}</span>
@@ -175,6 +204,7 @@ const Contact = () => {
                 onChange={handlePhoneChange}
                 className="w-[75vw] lg:w-[45vw] px-[3.2rem] py-3 mb-5 bg-gray rounded-lg input"
               />
+              <input type="hidden" name="number" value={formData.number} />
             </div>
 
             {errors.number && (
@@ -198,6 +228,7 @@ const Contact = () => {
                 className="w-[75vw] lg:w-[45vw] h-[20vh] px-[3.2rem] py-3 mb-5 bg-gray input"
                 onChange={handleChange}
               ></textarea>
+              <input type="hidden" name="message" value={formData.message} />
             </div>
             {errors.message && (
               <span className="error-text text-red-700">{errors.message}</span>
