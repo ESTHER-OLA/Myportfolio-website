@@ -70,46 +70,46 @@ const Contact = () => {
     if (!captchaToken) {
       validationErrors.captcha = "Please complete the CAPTCHA";
     }
-    // Submit form data to Netlify
-    const formDataToSubmit = new FormData();
-    formDataToSubmit.append("form-name", "contact");
-    formDataToSubmit.append("name", formData.name);
-    formDataToSubmit.append("email", formData.email);
-    formDataToSubmit.append("number", formData.number);
-    formDataToSubmit.append("message", formData.message);
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        body: formDataToSubmit,
-      });
-
+    if (Object.keys(validationErrors).length === 0) {
       toast.success("MESSAGE SENT SUCCESSFULLY!");
+      console.log("Form sent successfully");
       setFormData({
         name: "",
         email: "",
         number: "",
         message: "",
       });
-    } catch (error) {
-      console.error("Form submission error:", error);
-      toast.error("Failed to send message. Please try again.");
+    } else {
+      setErrors(validationErrors);
     }
   };
+  //   // Submit form data to Netlify
+  //   const formDataToSubmit = new FormData();
+  //   formDataToSubmit.append("form-name", "contact");
+  //   formDataToSubmit.append("name", formData.name);
+  //   formDataToSubmit.append("email", formData.email);
+  //   formDataToSubmit.append("number", formData.number);
+  //   formDataToSubmit.append("message", formData.message);
 
-  //   if (Object.keys(validationErrors).length === 0) {
+  //   try {
+  //     await fetch("/", {
+  //       method: "POST",
+  //       body: formDataToSubmit,
+  //     });
+
   //     toast.success("MESSAGE SENT SUCCESSFULLY!");
-  //     console.log("Form sent successfully");
   //     setFormData({
   //       name: "",
   //       email: "",
   //       number: "",
   //       message: "",
   //     });
-  //   } else {
-  //     setErrors(validationErrors);
+  //   } catch (error) {
+  //     console.error("Form submission error:", error);
+  //     toast.error("Failed to send message. Please try again.");
   //   }
   // };
+
   return (
     <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
       <ToastContainer
