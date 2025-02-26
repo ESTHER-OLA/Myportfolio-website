@@ -82,7 +82,6 @@ const Contact = () => {
       await fetch("/", {
         method: "POST",
         body: formDataToSubmit,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
 
       toast.success("MESSAGE SENT SUCCESSFULLY!");
