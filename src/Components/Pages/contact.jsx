@@ -82,6 +82,7 @@ const Contact = () => {
       await fetch("/", {
         method: "POST",
         body: formDataToSubmit,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
       });
 
       toast.success("MESSAGE SENT SUCCESSFULLY!");
@@ -138,10 +139,12 @@ const Contact = () => {
           name="contact"
           method="POST"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           className="relative top-0 right-0 left-0 flex flex-col"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
           <div>
             <label htmlFor="name" className="text-gold font-lg font-serif">
               Name
