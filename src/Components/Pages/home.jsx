@@ -19,10 +19,10 @@ const home = () => {
           <p className="text-2xl pb-5 leading-[3rem] tracking-wide fade-in">
             <RotatingText
               items={[
-                "FRONTEND DEVELOPER",
+                "React.js Developer",
                 "SEO SPECIALIST",
-                "WORDPRESS WEBSITE DEVELOPER",
-                "REACT JS ENTHUSIAST",
+                "Full-Stack & Frontend Engineer",
+                "Crafting Scalable, High-Performance Web ExperiencesT",
               ]}
             />
           </p>

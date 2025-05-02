@@ -1,104 +1,79 @@
 import React from "react";
-import { MdImportantDevices } from "react-icons/md";
-import { TbKeyframesFilled } from "react-icons/tb";
-import { SiWolframmathematica } from "react-icons/si";
-import { FaWordpress } from "react-icons/fa";
-import { GrSupport } from "react-icons/gr";
-import { TbSeo } from "react-icons/tb";
+import { MdExtension } from "react-icons/md";
+import { FaRocket } from "react-icons/fa";
+import { AiOutlineBorder } from "react-icons/ai";
+import { BiAccessibility } from "react-icons/bi";
+import { VscDeviceMobile } from "react-icons/vsc";
+import { RiFileList3Line } from "react-icons/ri";
 
-const services = () => {
+const Services = () => {
+  const serviceItems = [
+    {
+      icon: <MdExtension className="rounded-full bg-white w-[30px] h-[30px]" />,
+      title: "Design System & Component Libraries",
+      description:
+        "Build scalable, reusable component libraries and design systems with Storybook and Tailwind CSS to ensure consistency, accelerate development, and empower your team to ship UI features faster.",
+    },
+    {
+      icon: <FaRocket className="rounded-full bg-white w-[30px] h-[30px]" />,
+      title: "Performance & Core Web Vitals",
+      description:
+        "Optimize front-end performance end-to-end: implement lazy loading, code splitting, image optimization, and asset fine-tuning to achieve fast load times, smooth interactions, and top Core Web Vitals scores.",
+    },
+    {
+      icon: (
+        <AiOutlineBorder className="rounded-full bg-white w-[30px] h-[30px]" />
+      ),
+      title: "Progressive Web Apps (PWA)",
+      description:
+        "Transform your web application into an installable PWA with offline capabilities, background sync, and push notifications—delivering a native-like experience that keeps users engaged even when they go offline.",
+    },
+    {
+      icon: (
+        <BiAccessibility className="rounded-full bg-white w-[30px] h-[30px]" />
+      ),
+      title: "Accessibility Audits & Compliance",
+      description:
+        "Conduct thorough WCAG accessibility audits and remediation: add ARIA roles, semantic HTML, keyboard navigation, and color-contrast improvements so every user can interact with your app seamlessly.",
+    },
+    {
+      icon: (
+        <VscDeviceMobile className="rounded-full bg-white w-[30px] h-[30px]" />
+      ),
+      title: "Responsive & Adaptive Design",
+      description:
+        "Craft fluid, responsive layouts and adaptive interfaces using CSS Grid, Flexbox, and modern CSS techniques. Ensure pixel-perfect experiences across mobile, tablet, and desktop screens.",
+    },
+    {
+      icon: (
+        <RiFileList3Line className="rounded-full bg-white w-[30px] h-[30px]" />
+      ),
+      title: "Testing & CI/CD Integration",
+      description:
+        "Maintain rock-solid front-end quality with automated testing (unit tests in Jest, component snapshots, E2E tests in Cypress) and integrate CI/CD pipelines to catch regressions early and streamline your deployments.",
+    },
+  ];
+
   return (
-    <div className="bg-black bg-opacity-75 lg:h-screen items-center justify-center lg:py-[3rem] lg:px-[5rem] py-[8px] px-[15px] service bounce">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-[20px] items-center justify-center service-grid">
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1.5rem] p-[0.8rem] service-item">
-          <div className="flex flex-row gap-4">
-            <MdImportantDevices className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond">
-              {" "}
-              Creative User Interface Design
-            </h1>
+    <section className="bg-black bg-opacity-75 lg:h-screen items-center justify-center lg:py-16 lg:px-20 p-4 service bounce">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 service-grid">
+        {serviceItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-4 items-start border border-white lg:p-6 p-4 service-item"
+          >
+            <div className="flex flex-row gap-4 items-center">
+              {item.icon}
+              <h2 className="text-gold text-lg font-bold font-eb-garamond">
+                {item.title}
+              </h2>
+            </div>
+            <p className="text-white text-sm">{item.description}</p>
           </div>
-          <p className="text-white text-sm">
-            I excel in creating visually appealing and interactive user
-            interfaces using HTML, CSS, and JavaScript to deliver a seamless
-            user experience.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1rem] p-[0.3rem] service-item">
-          <div className="flex flex-row gap-4">
-            <TbKeyframesFilled className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond">
-              Interactive Front-end Development
-            </h1>
-          </div>
-          <p className="text-white text-sm">
-            I excel in developing interactive and dynamic web applications using
-            popular front-end frameworks like React, Angular, or Vue.js to
-            provide a seamless user experience.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1.5rem] p-[0.8rem] service-item">
-          <div className="flex flex-row gap-4">
-            <SiWolframmathematica className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond">
-              {" "}
-              Responsive Design Implementation
-            </h1>
-          </div>
-          <p className="text-white text-sm">
-            I ensure your website is optimized for all devices and browsers,
-            delivering a consistent user experience across desktop, mobile, and
-            tablet platforms.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1rem] p-[0.3rem] service-item">
-          <div className="flex flex-row gap-4">
-            <FaWordpress className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond">
-              Bespoke WordPress Development
-            </h1>
-          </div>
-          <p className="text-white text-sm">
-            I offer customized WordPress solutions including custom theme
-            design, plugin development, and backend integration to create a
-            personalized and functional website that aligns with your business
-            objectives.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1.5rem] p-[0.5rem] service-item">
-          <div className="flex flex-row gap-4">
-            <GrSupport className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond">
-              Proactive Maintenance and Support
-            </h1>
-          </div>
-          <p className="text-white text-sm">
-            I provide comprehensive maintenance services for your WordPress
-            website, including regular updates, security checks, and technical
-            support to keep your site running smoothly and securely.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 items-start border border-white lg:p-[1rem] p-[0.3rem] service-item">
-          <div className="flex flex-row gap-4">
-            <TbSeo className="rounded-full bg-white w-[30px] h-[30px]" />
-            <h1 className="text-gold text-md font-bold font-eb-garamond lg:leading-5">
-              SEO-Optimized WordPress Solutions
-            </h1>
-          </div>
-          <p className="text-white text-sm">
-            I optimize your WordPress website for search engines by implementing
-            on-page SEO techniques, enhancing site performance, and structuring
-            content to improve visibility and attract organic traffic.
-          </p>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default services;
+export default Services;

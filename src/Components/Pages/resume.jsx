@@ -3,214 +3,170 @@ import line from "../../assets/images/line.svg";
 import { SiLiberadotchat } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
 import ClockLoader from "react-spinners/ClockLoader";
-import image from "../../assets/images/profile.png";
-import heyjayTech from "../../assets/images/heyjaytech-logo.png";
-import techSolution from "../../assets/images/techSolution.jpeg";
+import profileImg from "../../assets/images/profile.png";
+import heyjayTechLogo from "../../assets/images/heyjaytech-logo.png";
+import herTechTrailLogo from "../../assets/images/hertechtrail-icon.jpg";
+import techSolutionLogo from "../../assets/images/techSolution.jpeg";
 import NXGLogo from "../../assets/images/NXG-logo.jpg";
-import { SiCss3 } from "react-icons/si";
+import freelancerLogo from "../../assets/images/logo-icon-nav.png";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
-import { SiSass } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { RiReactjsLine } from "react-icons/ri";
 
+const certifications = [
+  {
+    title: "Software Development",
+    issuer: "Tech4dev",
+  },
+  {
+    title: "Front-End Web Development",
+    issuer: "Hertechtrail Academy",
+  },
+  {
+    title: "Diploma in Website Development & SEO",
+    issuer: "Digital Marketing Skills Institute",
+  },
+  {
+    title: "Responsive Web Design & JavaScript Algorithms",
+    issuer: "FreeCodeCamp",
+  },
+  {
+    title: "Bachelor of Arts, Yoruba Language",
+    issuer: "Tai Solarin University",
+  },
+];
+
+const experiences = [
+  { company: "Freelance", role: "Frontend Developer", logo: freelancerLogo },
+  { company: "NXG Technology Hub", role: "Frontend Developer", logo: NXGLogo },
+  {
+    company: "Hertechtrail",
+    role: "Frontend Developer",
+    logo: herTechTrailLogo,
+  },
+  {
+    company: "HeyJay Technologies",
+    role: "Technical Account Manager",
+    logo: heyjayTechLogo,
+  },
+  {
+    company: "Tech Certify Solutions",
+    role: "Frontend Developer (Intern)",
+    logo: techSolutionLogo,
+  },
+];
+
+const skills = [
+  {
+    name: "HTML5 / CSS3",
+    icon: <FaHtml5 size={15} className="border border-gold" />,
+  },
+  {
+    name: "TailwindCSS / SASS",
+    icon: <RiTailwindCssFill size={15} className="border border-gold" />,
+  },
+  {
+    name: "JavaScript / Bootstrap",
+    icon: <RiJavascriptFill size={15} className="border border-gold" />,
+  },
+  {
+    name: "ReactJS / NextJS",
+    icon: <RiReactjsLine size={15} className="border border-gold" />,
+  },
+  {
+    name: "Redux / Zustand",
+    icon: <RiReactjsLine size={15} className="border border-gold" />,
+  },
+  {
+    name: "RESTful APIs",
+    icon: <RiReactjsLine size={15} className="border border-gold" />,
+  },
+  {
+    name: "Git / GitHub",
+    icon: <FaBootstrap size={15} className="border border-gold" />,
+  },
+  {
+    name: "Agile Methodologies",
+    icon: <FaBootstrap size={15} className="border border-gold" />,
+  },
+  {
+    name: "And others...",
+    icon: <FaBootstrap size={15} className="border border-gold" />,
+  },
+];
+
 const resume = () => {
   return (
-    <div className="bg-black bg-opacity-75 h-screen text-white grid grid-cols-1 lg:grid-cols-2 lg:gap-[20px] px-[10px] py-[5px] lg:px-[15rem] resume-hero fade-in">
-      <div className="flex flex-col gap-2 items-start  hero-text">
+    <div className="bg-black bg-opacity-75 text-white grid grid-cols-1 lg:grid-cols-2 lg:gap-[20px] px-[10px] py-[5px] lg:px-[15rem] resume-hero fade-in">
+      <section className="flex flex-col gap-2 items-start  hero-text">
         <h1 className="text-xl font-eb-garamond leading-3">Certifications</h1>
         <img className="w-[40%]" src={line} alt="" />
 
-        <div className="flex flex-row gap-2 mb-2">
-          <SiLiberadotchat className="w-3 h-3" />
-          <div className="flex flex-col gap-3">
-            <h5 className="text-md leading-3 font-serif">
-              Front-End Web Development
-            </h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader className="" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif leading-3">
-                Hertechtrail Academy
-              </p>
+        {certifications.map((cert, idx) => (
+          <div key={idx} className="flex items-start gap-3 mb-4">
+            <SiLiberadotchat className="w-4 h-4" />
+            <div>
+              <h5 className="font-serif text-md">{cert.title}</h5>
+              <div className="flex items-center gap-2">
+                <ClockLoader color="#DA9100" size={12} />
+                <p className="text-sm text-gold font-serif">{cert.issuer}</p>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
+      </section>
 
-        <div className="flex flex-row gap-2 mb-2">
-          <SiLiberadotchat className="w-3 h-3" />
-          <div className="flex flex-col gap-3">
-            <h5 className="text-md leading-3 font-serif">
-              Diploma in Website Development & SEO
-            </h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader className="" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif leading-3">
-                Digital Marketing Skill Institute
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-2 mb-2">
-          <SiLiberadotchat className="w-3 h-3" />
-          <div className="flex flex-col gap-3">
-            <h5 className="text-md leading-3 font-serif">
-              Javascript Algorithms and Data Structures
-            </h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif leading-3">
-                FreeCodeCamp
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-2 mb-2">
-          <SiLiberadotchat className="w-3 h-3" />
-          <div className="flex flex-col gap-3">
-            <h5 className="text-md leading-3 font-serif">
-              Responsive Web Design
-            </h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif leading-3">
-                FreeCodeCamp
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-2 lg:mb-2">
-          <SiLiberadotchat className="w-3 h-3" />
-          <div className="flex flex-col gap-3">
-            <h5 className="text-md leading-3 font-serif">
-              National Youth Service Corps
-            </h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif leading-3">
-                NYSC Nigeria
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Profile Image */}
+      <div className="img-grid lg:ml-28 lg:mt-2 hidden lg:block">
+        <img src={profileImg} alt="Profile" className="resume-img" />
       </div>
 
-      <div className="img-grid lg:ml-[7rem] lg:mt-4">
-        <img className="hidden lgblock resume-img" src={image} alt="" />
-      </div>
-
-      <div className="flex flex-col gap-1 items-start grid2">
+      {/* Experience Section */}
+      <section className="grid2">
         <h1 className="text-xl font-eb-garamond">Experience</h1>
-        <img className="w-[60%]" src={line} alt="" />
-
-        <div className="flex flex-row gap-3 mt-2">
-          <img
-            src={NXGLogo}
-            className="h-[20px] w-[60px] border-2 border-gold"
-            alt=""
-          />
-          <div className="flex flex-col">
-            <h5 className="text-md font-serif">NXG Technology Hub</h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader className="mt-1" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif">Frontend Developer</p>
+        <img src={line} alt="divider" className="w-60 my-2" />
+        {experiences.map((exp, idx) => (
+          <div key={idx} className="flex items-center gap-3 my-3">
+            <img
+              src={exp.logo}
+              alt={exp.company}
+              className="w-16 h-5 border-2 border-gold"
+            />
+            <div>
+              <h5 className="font-serif text-md">{exp.company}</h5>
+              <div className="flex items-center gap-2">
+                <ClockLoader color="#DA9100" size={12} />
+                <p className="text-sm text-gold font-serif">{exp.role}</p>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
+      </section>
 
-        <div className="flex flex-row gap-3 mt-2">
-          <img
-            src={heyjayTech}
-            className="h-[20px] w-[60px] border-2 border-gold"
-            alt=""
-          />
-          <div className="flex flex-col">
-            <h5 className="text-md font-serif">HeyJay Technologies</h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader className="mt-1" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif">
-                Technical Account Manager
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-3">
-          <img
-            src={techSolution}
-            className="h-[20px] w-[60px] border-2 border-gold"
-            alt=""
-          />
-          <div className="flex flex-col">
-            <h5 className="text-md font-serif">Tech Certify Solutions</h5>
-            <div className="flex flex-row gap-2">
-              <ClockLoader className="mt-1" color="#DA9100" size={12} />
-              <p className="text-sm text-gold font-serif">
-                Frontend Developer (Intern)
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-1 items-start lg:ml-[9rem]">
+      <section className="flex flex-col gap-1 items-start lg:ml-36">
         <h1 className="text-xl font-eb-garamond">Skill Sets</h1>
-        <img className="w-[60%]" src={line} alt="" />
+        <img className="w-60 my-2" src={line} alt="" />
 
         <div className="lg:flex lg:flex-col grid grid-cols-3 gap-2 mt-2">
-          <div className="flex flex-row gap-2">
-            <FaHtml5 className="border border-gold" color="black" size={15} />
-            <p className="text-sm text-white font-serif">HTML5</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <SiCss3 className="border border-gold" color="black" size={15} />
-            <p className="text-sm text-white font-serif">CSS3</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <SiSass className="border border-gold" color="black" size={15} />
-            <p className="text-sm text-white font-serif">SASS</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <RiTailwindCssFill
-              className="border border-gold"
-              color="black"
-              size={15}
-            />
-            <p className="text-sm text-white font-serif">TailwindCss</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <RiJavascriptFill
-              className="border border-gold"
-              color="black"
-              size={15}
-            />
-            <p className="text-sm text-white font-serif">Javascript</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <RiReactjsLine
-              className="border border-gold"
-              color="black"
-              size={15}
-            />
-            <p className="text-sm text-white font-serif">React Js</p>
-          </div>
-
-          <div className="flex flex-row gap-2">
-            <FaBootstrap
-              className="border border-gold"
-              color="black"
-              size={15}
-            />
-            <p className="text-sm text-white font-serif">Bootstrap</p>
-          </div>
+          {skills.map((skill, idx) => (
+            <div key={idx} className="flex items-row gap-2">
+              {skill.icon}
+              <p className="text-sm text-white font-serif">{skill.name}</p>
+            </div>
+          ))}
         </div>
-      </div>
+      </section>
+
+      <section className="lg:col-span-2 flex justify-end lg:my-4">
+        <a
+          href="/Esther-Ola_Resume.pdf"
+          download
+          className="bg-red text-white px-4 py-2 rounded-md hover:bg-blue transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+        >
+          Download Resume
+        </a>
+      </section>
     </div>
   );
 };
