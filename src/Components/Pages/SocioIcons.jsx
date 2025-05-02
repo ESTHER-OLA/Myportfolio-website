@@ -56,7 +56,7 @@ const SocioIcons = () => {
         <FaLinkedin className="w-[20px] h-[20px]" />
       </a>
       <a
-        href="https://www.instagram.com/realtecheo?igsh=amtlOTBqYzVvMjdm"
+        href="https://www.instagram.com/realesther_ola/"
         target="_blank"
         className="rotate"
       >

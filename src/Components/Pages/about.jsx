@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const about = () => {
   return (
-    <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 lg:h-screen py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
+    <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
         className="w-[35%] lg:h-[40vh] ml-[20px] lg:ml-0 lg:mt-[3rem] bounce"
         src={image}
@@ -17,25 +17,34 @@ const about = () => {
         </h1>
         <img className="lg:mx-[25%] fade-in" src={lineBorder} alt="" />
         <h5 className="text-yellow lg:leading-8 text-xl font-eb-garamond font-normal text-center lg:font-medium lg:text-nowrap lg:px-[4rem] fade-in">
-          Frontend Developer | WordPress Website Developer | SEO Specialist
+          React.js Developer | Full-Stack & Frontend Engineer
         </h5>
         <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
-          I’m Esther Ola, a dedicated Frontend Developer with expertise in
-          JavaScript, React, and frameworks like Next.js and Redux Toolkit. My
-          work at NXG Hub and Hertechtrail Academy reflects a commitment to
-          creating responsive, user-focused applications, from job listing
-          platforms with robust admin features to community-driven meal planning
-          apps. Each project is crafted with precision, blending design and
-          functionality to deliver high-performance, intuitive user experiences.
+          I’m Esther Ola a results-driven Frontend Engineer passionate about
+          building pixel-perfect, accessible, and scalable web interfaces. With
+          strong proficiency in JavaScript, React, Next.js, and modern UI
+          libraries like Tailwind CSS and Shadcn/UI, I craft digital experiences
+          that are fast, responsive, and user-first.
         </p>
         <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
-          With certifications from HerTechTrail Academy and freeCodeCamp, along
-          with specialized training in WordPress Development and SEO, I bring a
-          comprehensive skill set that covers modern web technologies. My
-          approach emphasizes seamless API integrations, enhanced UX/UI, and
-          mobile responsiveness. I am always eager to collaborate with
-          innovative teams to elevate digital experiences and consistently
-          deliver impactful solutions.
+          From dynamic job platforms to intuitive admin dashboards and fintech
+          applications, I’ve built and maintained real-world solutions during my
+          time at NXG Technology and HerTechTrail. My workflow emphasizes clean
+          architecture, reusable components, seamless API integration, and
+          mobile responsiveness ensuring a consistent user journey across all
+          devices.
+        </p>
+        <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
+          Beyond the frontend, I bring value with SEO knowledge, WordPress
+          experience, and backend familiarity, making me a versatile asset in
+          cross-functional teams. Certified by HerTechTrail Academy,
+          freeCodeCamp, and the Digital Marketing Skills Institute, I’m
+          constantly learning and open to exciting opportunities in frontend
+          engineering whether it's in tech startups, product teams, or agencies.
+        </p>
+
+        <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
+          Let’s build the future of the web one component at a time.
         </p>
         <div className="flex flex-row gap-2 lg:gap-5">
           <Link to="/resume">

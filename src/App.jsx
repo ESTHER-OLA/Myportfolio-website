@@ -25,7 +25,7 @@ const App = () => {
         </div>
       ) : (
         <div
-          className="min-h-screen bg-cover bg-center"
+          className="bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundColor: "rgb(50, 53, 64)",

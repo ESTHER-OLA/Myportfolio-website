@@ -5,6 +5,7 @@ import NXGWEBAPP from "../../assets/images/NXG-WEBAPP.png";
 import Dashboard from "../../assets/images/dashboard-setting.png";
 import blogApp from "../../assets/images/blog-app.png";
 import coffeeWebsite from "../../assets/images/coffee-website-bg.png";
+import furnitureShop from "../../assets/images/Eccom-furnitureShop.png";
 import { Link } from "react-router-dom";
 import RotatingText from "react-rotating-text";
 
@@ -39,6 +40,11 @@ const projects = [
     link: "https://blog-post-taupe-chi.vercel.app/",
     image: blogApp,
   },
+  {
+    title: "Furniture Shop (Ecommerce Web App)",
+    link: "https://a-shine-furniture.vercel.app/#",
+    image: furnitureShop,
+  },
 ];
 
 const ProjectCard = ({ title, link, image }) => (
@@ -60,12 +66,10 @@ const ProjectCard = ({ title, link, image }) => (
 
 const Portfolio = () => {
   return (
-    <div className="fade-in portfolio bg-black bg-opacity-75 h-screen px-[2rem] py-[3px] lg:px-[10rem] lg:py-[0.5rem]">
-      <div>
-        <h1 className="text-gold text-center text-xl font-eb-garamond">
-          MY PROJECTS
-        </h1>
-      </div>
+    <div className="fade-in portfolio bg-black bg-opacity-75 px-[2rem] py-[3px] lg:px-[10rem] lg:py-[0.5rem]">
+      <h1 className="text-gold text-center text-xl font-eb-garamond my-3">
+        MY PROJECTS
+      </h1>
 
       <div className="grid grid-cols-2 lg:grid-cols-3 lg:gap-[47px] gap-[10px] items-center justify-center port-img">
         {projects.map((project, index) => (
@@ -78,7 +82,7 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className="mt-3">
+      <div className="mt-5">
         <p className="text-md text-gold leading-none tracking-wide fade-in">
           <RotatingText
             items={[

@@ -100,7 +100,7 @@ const resume = () => {
   return (
     <div className="bg-black bg-opacity-75 text-white grid grid-cols-1 lg:grid-cols-2 lg:gap-[20px] px-[10px] py-[5px] lg:px-[15rem] resume-hero fade-in">
       <section className="flex flex-col gap-2 items-start  hero-text">
-        <h1 className="text-xl font-eb-garamond leading-3">Certifications</h1>
+        <h1 className="text-xl font-eb-garamond leading-3 my-2">Certifications</h1>
         <img className="w-[40%]" src={line} alt="" />
 
         {certifications.map((cert, idx) => (

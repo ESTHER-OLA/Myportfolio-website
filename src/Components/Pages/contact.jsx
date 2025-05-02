@@ -109,7 +109,7 @@ const Contact = () => {
   // };
 
   return (
-    <div className="items-center bg-black bg-opacity-75 h-screen py-[3px] px-[3rem] justify-center fade-in">
+    <div className="items-center bg-black bg-opacity-75 py-[3px] px-[3rem] justify-center fade-in">
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -229,7 +229,7 @@ const Contact = () => {
               <span className="error-text text-red-700">{errors.message}</span>
             )}
           </div>
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 my-4">
             <div className="lg:w-auto">
               <HCaptcha
                 sitekey="bf4c7345-d958-4be7-9ec9-801de19c25bf"
