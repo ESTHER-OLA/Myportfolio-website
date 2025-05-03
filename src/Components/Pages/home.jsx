@@ -7,7 +7,7 @@ import RotatingText from "react-rotating-text";
 const home = () => {
   return (
     <>
-      <div className="flex flex-col lg:gap-16 bg-black bg-opacity-75 items-start text-white px-[5rem] py-[5rem] fade-in">
+      <div className="flex flex-col lg:gap-16 h-screen bg-black bg-opacity-75 items-start text-white px-[5rem] py-[5rem] fade-in">
         <div className="">
           {" "}
           <h1 className="text-3xl text-yellow leading-[3rem] tracking-wide bounce">
