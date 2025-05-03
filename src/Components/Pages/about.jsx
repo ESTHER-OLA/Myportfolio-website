@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const about = () => {
   return (
-    <div className="lg:flex lg:flex-row sm:flex-col sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
+    <div className="lg:flex lg:flex-row sm:flex-col h-screen sm:gap-4 lg:gap-[5rem] bg-black bg-opacity-75 py-[5px] px-[20px] lg:py-[5rem] lg:px-[10rem] text-white fade-in">
       <img
         className="w-[35%] lg:h-[40vh] ml-[20px] lg:ml-0 lg:mt-[3rem] bounce"
         src={image}
@@ -16,11 +16,13 @@ const about = () => {
           ABOUT
         </h1>
         <img className="lg:mx-[25%] fade-in" src={lineBorder} alt="" />
-        <h5 className="text-yellow lg:leading-8 text-xl font-eb-garamond font-normal text-center lg:font-medium lg:text-nowrap lg:px-[4rem] fade-in">
-          React.js Developer | Full-Stack & Frontend Engineer
-        </h5>
+        <div className="text-yellow lg:leading-8 text-xl font-eb-garamond font-normal text-center lg:w-[600px] lg:font-medium lg:text-wrap lg:px-[4rem] fade-in">
+          React.js Developer | Frontend Developer | Web Developer Specializing
+          in Scalable, High-Performance Applications
+          {/* <p></p> */}
+        </div>
         <p className="lg:leading-[20px] lg:w-[50vw] text-base lg:text-lg font-sm lg:font-medium font-eb-garamond lg:py-3 lg:px-8 fade-in">
-          I’m Esther Ola a results-driven Frontend Engineer passionate about
+          I’m Esther Ola a results-driven Frontend Developer passionate about
           building pixel-perfect, accessible, and scalable web interfaces. With
           strong proficiency in JavaScript, React, Next.js, and modern UI
           libraries like Tailwind CSS and Shadcn/UI, I craft digital experiences
