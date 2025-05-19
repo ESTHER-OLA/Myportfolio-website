@@ -6,6 +6,7 @@ import Dashboard from "../../assets/images/dashboard-setting.png";
 import blogApp from "../../assets/images/blog-app.png";
 import coffeeWebsite from "../../assets/images/coffee-website-bg.png";
 import furnitureShop from "../../assets/images/Eccom-furnitureShop.png";
+import lapoDashboard from "../../assets/images/lapo-dashboard.png";
 import { Link } from "react-router-dom";
 import RotatingText from "react-rotating-text";
 
@@ -44,6 +45,11 @@ const projects = [
     title: "Furniture Shop (Ecommerce Web App)",
     link: "https://a-shine-furniture.vercel.app/#",
     image: furnitureShop,
+  },
+  {
+    title: "Lapo Web App (Card Management Web App)",
+    link: "https://core-infra-dashboard.vercel.app/",
+    image: lapoDashboard,
   },
 ];
 
